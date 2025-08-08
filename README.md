@@ -10,13 +10,13 @@ NovaFramework的教程示例库，提供框架使用的各个模块教程示例�
 4. 运行程序，将自动转入对应案例类型的==SampleGate==并进入该案例的演示流程；
 
 目前已有的演示案例包括：  
-- [Text Format](Text%20Format/README.md)
+- [Text Format](Runtime/Text%20Format/README.md)
 - Symbol Parser
 - Inversion Of Control
-- [Object Lifecycle](Object%20Lifecycle/README.md)
-- [Dispatch Call](Dispatch%20Call/README.md)
+- [Object Lifecycle](Runtime/Object%20Lifecycle/README.md)
+- [Dispatch Call](Runtime/Dispatch%20Call/README.md)
 - Dependency Inject
-- [Performance Analysis](Performance%20Analysis/README.md)
+- [Performance Analysis](Runtime/Performance%20Analysis/README.md)
 
 ## 注意事项
 
