@@ -28,7 +28,7 @@ namespace GameEngine.Sample.SymbolParser
     /// <summary>
     /// 移动组件类
     /// </summary>
-    public class MoveComponent : GameEngine.CComponent
+    internal class MoveComponent : GameEngine.CComponent
     {
         public float interval;
         public float escapedTime;

@@ -29,7 +29,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 身份组件类
     /// </summary>
     [GameEngine.DeclareComponentClass("IdentityComponent")]
-    public class IdentityComponent : GameEngine.CComponent
+    internal class IdentityComponent : GameEngine.CComponent
     {
         public int objectID;
 

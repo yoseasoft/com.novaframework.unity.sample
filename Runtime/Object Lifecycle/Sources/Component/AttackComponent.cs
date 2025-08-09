@@ -29,7 +29,7 @@ namespace GameEngine.Sample.ObjectLifecycle
     /// 攻击组件类
     /// </summary>
     [GameEngine.DeclareComponentClass("AttackComponent")]
-    public abstract class AttackComponent : GameEngine.CComponent
+    internal abstract class AttackComponent : GameEngine.CComponent
     {
     }
 }

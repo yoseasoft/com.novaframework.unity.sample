@@ -30,7 +30,11 @@ namespace GameEngine.Sample.SymbolParser
     /// </summary>
     [GameEngine.DeclareActorClass("Actor")]
     [GameEngine.EntityActivationComponent(typeof(AttributeComponent))]
-    public abstract class Actor : GameEngine.CActor
+    internal abstract class Actor : GameEngine.CActor, IBuild
     {
+        public void OnBuild()
+        {
+            Debugger.Info("调用OnBuild函数！");
+        }
     }
 }

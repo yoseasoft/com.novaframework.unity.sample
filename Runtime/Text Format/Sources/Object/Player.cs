@@ -29,7 +29,7 @@ namespace GameEngine.Sample.TextFormat
     /// 玩家对象基类
     /// </summary>
     [GameEngine.DeclareActorClass("Player")]
-    public class Player : Soldier
+    internal class Player : Soldier
     {
         private int level;
         public PlayerCardInfo cardInfo;

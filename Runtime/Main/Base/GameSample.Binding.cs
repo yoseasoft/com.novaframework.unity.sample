@@ -28,7 +28,7 @@ namespace GameEngine.Sample
     /// <summary>
     /// 演示案例总控
     /// </summary>
-    public static partial class GameSample
+    internal static partial class GameSample
     {
         public static void Run()
         {

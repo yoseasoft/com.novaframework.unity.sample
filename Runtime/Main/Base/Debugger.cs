@@ -28,7 +28,7 @@ namespace GameEngine.Sample
     /// <summary>
     /// 游戏层提供的调试对象类，它是基于对<see cref="GameEngine.Debugger"/>的便捷性接口封装
     /// </summary>
-    public static class Debugger
+    internal static class Debugger
     {
         /// <summary>
         /// 基于调试模式下的日志输出接口

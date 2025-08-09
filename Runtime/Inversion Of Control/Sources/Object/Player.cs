@@ -31,7 +31,7 @@ namespace GameEngine.Sample.InversionOfControl
     [GameEngine.DeclareActorClass("Player")]
     [GameEngine.EntityActivationComponent(typeof(MoveComponent))]
     [GameEngine.EntityActivationComponent(typeof(AttackComponent), 0, GameEngine.AspectBehaviourType.Start)]
-    public class Player : Actor
+    internal class Player : Actor
     {
         protected override void OnInitialize()
         {

@@ -29,7 +29,7 @@ namespace GameEngine.Sample.InversionOfControl
     /// 攻击组件类
     /// </summary>
     [GameEngine.DeclareComponentClass("AttackComponent")]
-    public class AttackComponent : GameEngine.CComponent
+    internal class AttackComponent : GameEngine.CComponent
     {
         public AttackComponent()
         {

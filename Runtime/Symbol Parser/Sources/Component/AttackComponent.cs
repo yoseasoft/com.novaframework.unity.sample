@@ -28,7 +28,7 @@ namespace GameEngine.Sample.SymbolParser
     /// <summary>
     /// 攻击组件类
     /// </summary>
-    public class AttackComponent : GameEngine.CComponent
+    internal class AttackComponent : GameEngine.CComponent
     {
         public float coolingTime;
     }

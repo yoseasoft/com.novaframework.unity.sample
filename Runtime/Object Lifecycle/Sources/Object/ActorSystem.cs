@@ -28,7 +28,7 @@ namespace GameEngine.Sample.ObjectLifecycle
     /// <summary>
     /// 角色对象逻辑类
     /// </summary>
-    public static class ActorSystem
+    static class ActorSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Initialize)]
         static void BeforeInitialize(this Actor self)

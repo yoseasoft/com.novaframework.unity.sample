@@ -28,7 +28,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 孵化组件逻辑类
     /// </summary>
-    public static class SpawnComponentSystem
+    static class SpawnComponentSystem
     {
     }
 }

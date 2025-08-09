@@ -28,7 +28,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 攻击组件逻辑类
     /// </summary>
-    public static class AttackComponentSystem
+    static class AttackComponentSystem
     {
         [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.K, GameEngine.InputOperationType.Released)]
         private static void OnAttackInputObserve(this AttackComponent self, int keycode, int operationType)

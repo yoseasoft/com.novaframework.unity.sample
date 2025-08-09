@@ -28,7 +28,7 @@ namespace GameEngine.Sample
     /// <summary>
     /// 演示案例唯一键生成器
     /// </summary>
-    public static class UniqueGenerator
+    internal static class UniqueGenerator
     {
         private static int _uniqueCount = 10000;
 

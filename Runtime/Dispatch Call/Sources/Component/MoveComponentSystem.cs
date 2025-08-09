@@ -28,7 +28,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 移动组件逻辑类
     /// </summary>
-    public static class MoveComponentSystem
+    static class MoveComponentSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
         static void Awake(this MoveComponent self)

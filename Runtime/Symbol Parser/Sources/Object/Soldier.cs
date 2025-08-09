@@ -30,7 +30,11 @@ namespace GameEngine.Sample.SymbolParser
     /// </summary>
     [GameEngine.DeclareActorClass("Soldier")]
     [GameEngine.EntityActivationComponent(typeof(MoveComponent))]
-    public class Soldier : Actor
+    internal class Soldier : Actor, IState
     {
+        public void OnState(float dt)
+        {
+            Debugger.Info("调用OnState函数！");
+        }
     }
 }

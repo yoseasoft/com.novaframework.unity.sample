@@ -32,7 +32,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 怪物对象逻辑类
     /// </summary>
-    public static class MonsterSystem
+    static class MonsterSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
         static void Awake(this Monster self)

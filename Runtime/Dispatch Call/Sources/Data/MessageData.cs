@@ -30,7 +30,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 网络协议码定义
     /// </summary>
-    public static class ProtoOpcode
+    internal static class ProtoOpcode
     {
         public const ushort EnterWorldResp = 101;
         public const ushort LeaveWorldResp = 102;
@@ -47,7 +47,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 基础信息
     /// </summary>
     [ProtoBuf.ProtoContract]
-    public partial class BaseInfo : ProtoBuf.Extension.Object
+    internal partial class BaseInfo : ProtoBuf.Extension.Object
     {
         [ProtoBuf.ProtoMember(1)]
         public int Uid { get; set; }
@@ -63,7 +63,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 属性状态信息
     /// </summary>
     [ProtoBuf.ProtoContract]
-    public partial class AttrStatInfo : ProtoBuf.Extension.Object
+    internal partial class AttrStatInfo : ProtoBuf.Extension.Object
     {
         /// <summary>
         /// 等级
@@ -100,7 +100,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 三维向量信息
     /// </summary>
     [ProtoBuf.ProtoContract]
-    public partial class Vector3Info : ProtoBuf.Extension.Object
+    internal partial class Vector3Info : ProtoBuf.Extension.Object
     {
         [ProtoBuf.ProtoMember(1)]
         public float x { get; set; }
@@ -116,7 +116,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 技能信息
     /// </summary>
     [ProtoBuf.ProtoContract]
-    public partial class SkillInfo : ProtoBuf.Extension.Object
+    internal partial class SkillInfo : ProtoBuf.Extension.Object
     {
         [ProtoBuf.ProtoMember(1)]
         public int Id { get; set; }
@@ -144,7 +144,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 士兵信息
     /// </summary>
     [ProtoBuf.ProtoContract]
-    public partial class SoldierInfo : ProtoBuf.Extension.Object
+    internal partial class SoldierInfo : ProtoBuf.Extension.Object
     {
         [ProtoBuf.ProtoMember(1)]
         public BaseInfo Basic { get; set; }
@@ -178,7 +178,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 玩家信息
     /// </summary>
     [ProtoBuf.ProtoContract]
-    public partial class PlayerInfo : ProtoBuf.Extension.Object
+    internal partial class PlayerInfo : ProtoBuf.Extension.Object
     {
         [ProtoBuf.ProtoMember(1)]
         public SoldierInfo Soldier { get; set; }
@@ -188,7 +188,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 怪物信息
     /// </summary>
     [ProtoBuf.ProtoContract]
-    public partial class MonsterInfo : ProtoBuf.Extension.Object
+    internal partial class MonsterInfo : ProtoBuf.Extension.Object
     {
         [ProtoBuf.ProtoMember(1)]
         public SoldierInfo Soldier { get; set; }
@@ -199,7 +199,7 @@ namespace GameEngine.Sample.DispatchCall
     /// </summary>
     [ProtoBuf.ProtoContract]
     [ProtoBuf.Extension.Message(ProtoOpcode.EnterWorldResp)]
-    public partial class EnterWorldResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
+    internal partial class EnterWorldResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
     {
         [ProtoBuf.ProtoMember(1)]
         public int Code { get; set; }
@@ -216,7 +216,7 @@ namespace GameEngine.Sample.DispatchCall
     /// </summary>
     [ProtoBuf.ProtoContract]
     [ProtoBuf.Extension.Message(ProtoOpcode.LeaveWorldResp)]
-    public partial class LeaveWorldResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
+    internal partial class LeaveWorldResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
     {
         [ProtoBuf.ProtoMember(1)]
         public int Code { get; set; }
@@ -227,7 +227,7 @@ namespace GameEngine.Sample.DispatchCall
     /// </summary>
     [ProtoBuf.ProtoContract]
     [ProtoBuf.Extension.Message(ProtoOpcode.LevelSpawnResp)]
-    public partial class LevelSpawnResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
+    internal partial class LevelSpawnResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
     {
         [ProtoBuf.ProtoMember(1)]
         public int Code { get; set; }
@@ -244,7 +244,7 @@ namespace GameEngine.Sample.DispatchCall
     /// </summary>
     [ProtoBuf.ProtoContract]
     [ProtoBuf.Extension.Message(ProtoOpcode.LevelUpgradeResp)]
-    public partial class LevelUpgradeResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
+    internal partial class LevelUpgradeResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
     {
         [ProtoBuf.ProtoMember(1)]
         public int Uid { get; set; }
@@ -261,7 +261,7 @@ namespace GameEngine.Sample.DispatchCall
     /// </summary>
     [ProtoBuf.ProtoContract]
     [ProtoBuf.Extension.Message(ProtoOpcode.ActorHurtResp)]
-    public partial class ActorHurtResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
+    internal partial class ActorHurtResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
     {
         [ProtoBuf.ProtoMember(1)]
         public int Uid { get; set; }
@@ -278,7 +278,7 @@ namespace GameEngine.Sample.DispatchCall
     /// </summary>
     [ProtoBuf.ProtoContract]
     [ProtoBuf.Extension.Message(ProtoOpcode.ActorDieResp)]
-    public partial class ActorDieResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
+    internal partial class ActorDieResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
     {
         [ProtoBuf.ProtoMember(1)]
         public int Uid { get; set; }
@@ -288,7 +288,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 聊天信息
     /// </summary>
     [ProtoBuf.ProtoContract]
-    public partial class ChatInfo : ProtoBuf.Extension.Object
+    internal partial class ChatInfo : ProtoBuf.Extension.Object
     {
         [ProtoBuf.ProtoMember(1)]
         public int Uid { get; set; }
@@ -305,7 +305,7 @@ namespace GameEngine.Sample.DispatchCall
     /// </summary>
     [ProtoBuf.ProtoContract]
     [ProtoBuf.Extension.Message(ProtoOpcode.ActorChatResp)]
-    public partial class ActorChatResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
+    internal partial class ActorChatResp : ProtoBuf.Extension.Object, ProtoBuf.Extension.IMessage
     {
         [ProtoBuf.ProtoMember(1)]
         public List<ChatInfo> ChatList { get; set; }

@@ -29,7 +29,7 @@ namespace GameEngine.Sample.TextFormat
     /// 角色对象基类
     /// </summary>
     [GameEngine.DeclareActorClass("Actor")]
-    public abstract class Actor : GameEngine.CActor
+    internal abstract class Actor : GameEngine.CActor
     {
         private int objectID;
         protected int objectType;

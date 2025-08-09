@@ -28,7 +28,7 @@ namespace GameEngine.Sample.PerformanceAnalysis
     /// <summary>
     /// 通过系统原生object实现的角色对象类
     /// </summary>
-    public abstract class NativeActor : object
+    internal abstract class NativeActor : object
     {
         public int actor_count;
 

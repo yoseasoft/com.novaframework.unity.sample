@@ -28,7 +28,7 @@ namespace GameEngine.Sample.SymbolParser
     /// <summary>
     /// 装备接口类
     /// </summary>
-    public interface IEquip
+    internal interface IEquip
     {
         void OnEquip(int itemID);
     }

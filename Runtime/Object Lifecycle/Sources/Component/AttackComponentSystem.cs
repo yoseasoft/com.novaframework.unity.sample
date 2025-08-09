@@ -28,7 +28,7 @@ namespace GameEngine.Sample.ObjectLifecycle
     /// <summary>
     /// 攻击组件逻辑类
     /// </summary>
-    public static class AttackComponentSystem
+    static class AttackComponentSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Initialize)]
         static void BeforeInitialize(this AttackComponent self)

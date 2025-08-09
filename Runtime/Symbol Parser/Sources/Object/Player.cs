@@ -30,7 +30,11 @@ namespace GameEngine.Sample.SymbolParser
     /// </summary>
     [GameEngine.DeclareActorClass("Player")]
     [GameEngine.EntityActivationComponent(typeof(AttackComponent))]
-    public class Player : Soldier
+    internal class Player : Soldier, IEquip
     {
+        public void OnEquip(int itemID)
+        {
+            Debugger.Info("调用OnEquip函数！");
+        }
     }
 }

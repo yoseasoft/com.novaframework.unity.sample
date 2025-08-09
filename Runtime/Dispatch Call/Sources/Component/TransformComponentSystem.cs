@@ -28,7 +28,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 变换组件逻辑类
     /// </summary>
-    public static class TransformComponentSystem
+    static class TransformComponentSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
         static void Awake(this TransformComponent self)

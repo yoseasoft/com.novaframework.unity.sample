@@ -30,7 +30,7 @@ namespace GameEngine.Sample.PerformanceAnalysis
     /// </summary>
     [GameEngine.DeclareActorClass("GamePlayer")]
     [GameEngine.EntityActivationComponent(typeof(GameTransformComponent))]
-    public class GamePlayer : GameActor
+    internal class GamePlayer : GameActor
     {
         public int player_count;
 

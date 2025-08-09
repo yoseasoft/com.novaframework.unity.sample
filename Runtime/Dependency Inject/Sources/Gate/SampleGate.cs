@@ -28,10 +28,11 @@ namespace GameEngine.Sample.DependencyInject
     /// <summary>
     /// 案例入口类
     /// </summary>
-    public static class SampleGate
+    internal static class SampleGate
     {
         public static void Run()
         {
+            GameEngine.GameApi.ReplaceScene<MainScene>();
         }
 
         public static void Stop()

@@ -30,7 +30,7 @@ namespace GameEngine.Sample.TextFormat
     /// </summary>
     [GameEngine.DeclareSceneClass("Main")]
     [GameEngine.EntityActivationComponent(typeof(MainDataComponent))]
-    public class MainScene : GameEngine.CScene
+    internal class MainScene : GameEngine.CScene
     {
     }
 }

@@ -29,7 +29,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 变换组件类
     /// </summary>
     [GameEngine.DeclareComponentClass("TransformComponent")]
-    public class TransformComponent : GameEngine.CComponent
+    internal class TransformComponent : GameEngine.CComponent
     {
         public UnityEngine.Vector3 position;
         public UnityEngine.Vector3 rotation;

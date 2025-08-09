@@ -30,7 +30,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 玩家对象逻辑类
     /// </summary>
-    public static class PlayerSystem
+    static class PlayerSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
         static void Awake(this Player self)

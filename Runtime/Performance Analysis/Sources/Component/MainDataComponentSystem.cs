@@ -28,7 +28,7 @@ namespace GameEngine.Sample.PerformanceAnalysis
     /// <summary>
     /// 主场景数据组件逻辑类
     /// </summary>
-    public static class MainDataComponentSystem
+    static class MainDataComponentSystem
     {
     }
 }

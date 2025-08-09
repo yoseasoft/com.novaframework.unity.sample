@@ -28,7 +28,7 @@ namespace GameEngine.Sample.PerformanceAnalysis
     /// <summary>
     /// 变换组件逻辑类
     /// </summary>
-    public static class GameTransformComponentSystem
+    static class GameTransformComponentSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Initialize)]
         static void Initialize(this GameTransformComponent self)

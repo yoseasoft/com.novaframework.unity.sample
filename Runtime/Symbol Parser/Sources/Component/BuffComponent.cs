@@ -28,7 +28,7 @@ namespace GameEngine.Sample.SymbolParser
     /// <summary>
     /// Buff组件类
     /// </summary>
-    public class BuffComponent : GameEngine.CComponent
+    internal class BuffComponent : GameEngine.CComponent
     {
     }
 }

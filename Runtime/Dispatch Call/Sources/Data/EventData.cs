@@ -28,7 +28,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 事件通知类
     /// </summary>
-    public static class EventNotify
+    internal static class EventNotify
     {
         public const int PlayerDisplayInfo = 1101;
         public const int PlayerSearchAllEnemies = 1102; // 检索所有敌方单位
@@ -43,7 +43,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 士兵移动通知
     /// </summary>
-    public struct SoldierMovedNotify
+    internal struct SoldierMovedNotify
     {
         public int uid;
         public UnityEngine.Vector3 rotation;
@@ -53,7 +53,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 士兵使用技能通知
     /// </summary>
-    public struct SoldierUseSkillNotify
+    internal struct SoldierUseSkillNotify
     {
         public int uid;
         public int skill_id;

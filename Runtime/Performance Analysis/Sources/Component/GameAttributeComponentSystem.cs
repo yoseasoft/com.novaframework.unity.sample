@@ -28,7 +28,7 @@ namespace GameEngine.Sample.PerformanceAnalysis
     /// <summary>
     /// 属性组件逻辑类
     /// </summary>
-    public static class GameAttributeComponentSystem
+    static class GameAttributeComponentSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Initialize)]
         static void Initialize(this GameAttributeComponent self)

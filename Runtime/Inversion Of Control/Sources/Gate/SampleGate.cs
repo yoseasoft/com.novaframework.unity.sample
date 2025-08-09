@@ -28,7 +28,7 @@ namespace GameEngine.Sample.InversionOfControl
     /// <summary>
     /// 案例入口类
     /// </summary>
-    public static class SampleGate
+    internal static class SampleGate
     {
         public static void Run()
         {

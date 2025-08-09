@@ -28,7 +28,7 @@ namespace GameEngine.Sample.TextFormat
     /// <summary>
     /// 士兵Buff信息
     /// </summary>
-    public class SoldierBuffInfo
+    internal class SoldierBuffInfo
     {
         public int buff_id;
         public int buff_type;

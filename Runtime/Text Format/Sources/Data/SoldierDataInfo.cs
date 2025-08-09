@@ -28,7 +28,7 @@ namespace GameEngine.Sample.TextFormat
     /// <summary>
     /// 士兵块信息
     /// </summary>
-    public struct SoldierBlockInfo
+    internal struct SoldierBlockInfo
     {
         public int block_id;
         public int block_type;

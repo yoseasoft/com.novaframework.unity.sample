@@ -28,7 +28,7 @@ namespace GameEngine.Sample.SymbolParser
     /// <summary>
     /// 状态接口类
     /// </summary>
-    public interface IState
+    internal interface IState
     {
         void OnState(float dt);
     }

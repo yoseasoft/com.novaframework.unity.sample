@@ -28,7 +28,7 @@ namespace GameEngine.Sample.TextFormat
     /// <summary>
     /// 玩家技能信息
     /// </summary>
-    public class PlayerSkillInfo
+    internal class PlayerSkillInfo
     {
         public int skill_id;
         public int skill_type;

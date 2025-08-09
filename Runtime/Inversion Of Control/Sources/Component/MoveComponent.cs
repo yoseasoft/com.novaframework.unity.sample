@@ -29,7 +29,7 @@ namespace GameEngine.Sample.InversionOfControl
     /// 移动组件类
     /// </summary>
     [GameEngine.DeclareComponentClass("MoveComponent")]
-    public class MoveComponent : GameEngine.CComponent
+    internal class MoveComponent : GameEngine.CComponent
     {
         public MoveComponent()
         {

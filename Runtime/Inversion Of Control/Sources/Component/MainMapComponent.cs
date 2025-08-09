@@ -29,7 +29,7 @@ namespace GameEngine.Sample.InversionOfControl
     /// 主场景地图组件类
     /// </summary>
     [GameEngine.DeclareComponentClass("MainMapComponent")]
-    public class MainMapComponent : GameEngine.CComponent
+    internal class MainMapComponent : GameEngine.CComponent
     {
         public Player player;
 

@@ -28,7 +28,7 @@ namespace GameEngine.Sample.SymbolParser
     /// <summary>
     /// 攻击组件逻辑类
     /// </summary>
-    public static class AttackComponentSystem
+    static class AttackComponentSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
         static void Awake(this AttackComponent self)

@@ -33,7 +33,7 @@ namespace GameEngine.Sample.DispatchCall
     [GameEngine.EntityActivationComponent(typeof(MoveComponent))]
     [GameEngine.EntityActivationComponent(typeof(SkillComponent))]
     [GameEngine.EntityActivationComponent(typeof(ChatComponent))]
-    public class Soldier : Actor
+    internal class Soldier : Actor
     {
     }
 }

@@ -30,7 +30,7 @@ namespace GameEngine.Sample.DispatchCall
     /// </summary>
     [GameEngine.DeclareActorClass("Monster")]
     [GameEngine.EntityActivationComponent(typeof(SpawnComponent))]
-    public class Monster : Soldier
+    internal class Monster : Soldier
     {
     }
 }

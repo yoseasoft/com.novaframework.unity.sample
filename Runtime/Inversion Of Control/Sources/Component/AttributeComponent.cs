@@ -29,7 +29,7 @@ namespace GameEngine.Sample.InversionOfControl
     /// 属性组件类
     /// </summary>
     [GameEngine.DeclareComponentClass("AttributeComponent")]
-    public class AttributeComponent : GameEngine.CComponent
+    internal class AttributeComponent : GameEngine.CComponent
     {
         public AttributeComponent()
         {

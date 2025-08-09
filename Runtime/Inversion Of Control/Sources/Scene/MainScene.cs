@@ -30,7 +30,7 @@ namespace GameEngine.Sample.InversionOfControl
     /// </summary>
     [GameEngine.DeclareSceneClass("Main")]
     [GameEngine.EntityActivationComponent(typeof(MainMapComponent))]
-    public class MainScene : GameEngine.CScene
+    internal class MainScene : GameEngine.CScene
     {
         protected override void OnInitialize()
         {

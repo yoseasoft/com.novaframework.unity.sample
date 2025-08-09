@@ -28,7 +28,7 @@ namespace GameEngine.Sample.PerformanceAnalysis
     /// <summary>
     /// 角色对象逻辑类
     /// </summary>
-    public static class GameActorSystem
+    static class GameActorSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Initialize)]
         static void Initialize(this GameActor self)

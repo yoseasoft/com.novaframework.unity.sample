@@ -32,7 +32,7 @@ namespace GameEngine.Sample.DynamicInvokeGenerator
     /// <summary>
     /// 函数生成方式对比测试案例
     /// </summary>
-    public static class FunctionGenerationComparison
+    internal static class FunctionGenerationComparison
     {
         private abstract class Animal
         {

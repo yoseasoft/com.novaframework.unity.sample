@@ -31,7 +31,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 聊天组件类
     /// </summary>
     [GameEngine.DeclareComponentClass("ChatComponent")]
-    public class ChatComponent : GameEngine.CComponent
+    internal class ChatComponent : GameEngine.CComponent
     {
         public IList<string> messages;
 

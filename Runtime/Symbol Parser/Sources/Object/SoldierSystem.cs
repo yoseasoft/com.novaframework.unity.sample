@@ -28,7 +28,7 @@ namespace GameEngine.Sample.SymbolParser
     /// <summary>
     /// 战斗对象逻辑类
     /// </summary>
-    public static class SoldierSystem
+    static class SoldierSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
         static void Awake(this Soldier self)

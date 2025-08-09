@@ -29,7 +29,7 @@ namespace GameEngine.Sample.DynamicInvokeGenerator
     /// 主场景类
     /// </summary>
     [GameEngine.DeclareSceneClass("Main")]
-    public class MainScene : GameEngine.CScene
+    internal class MainScene : GameEngine.CScene
     {
     }
 }

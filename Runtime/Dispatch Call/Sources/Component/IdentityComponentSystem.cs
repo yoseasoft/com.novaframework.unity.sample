@@ -28,7 +28,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 身份组件逻辑类
     /// </summary>
-    public static class IdentityComponentSystem
+    static class IdentityComponentSystem
     {
     }
 }

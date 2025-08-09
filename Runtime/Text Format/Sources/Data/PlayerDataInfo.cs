@@ -30,7 +30,7 @@ namespace GameEngine.Sample.TextFormat
     /// <summary>
     /// 玩家信息
     /// </summary>
-    public struct PlayerCardInfo
+    internal struct PlayerCardInfo
     {
         public int card_id;
         public int card_type;
@@ -42,7 +42,7 @@ namespace GameEngine.Sample.TextFormat
     /// <summary>
     /// 玩家引用信息
     /// </summary>
-    public struct PlayerCardRefInfo
+    internal struct PlayerCardRefInfo
     {
         public int ref_count;
         public string ref_name;

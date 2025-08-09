@@ -28,7 +28,7 @@ namespace GameEngine.Sample.PerformanceAnalysis
     /// <summary>
     /// 通过系统原生object实现的属性组件类
     /// </summary>
-    public class NativeAttributeComponent : object
+    internal class NativeAttributeComponent : object
     {
         public int level;
 

@@ -28,7 +28,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 属性组件逻辑类
     /// </summary>
-    public static class AttributeComponentSystem
+    static class AttributeComponentSystem
     {
     }
 }

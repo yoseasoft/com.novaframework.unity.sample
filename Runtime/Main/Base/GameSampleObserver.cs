@@ -28,7 +28,7 @@ namespace GameEngine.Sample
     /// <summary>
     /// 演示案例全局观察器类
     /// </summary>
-    public static class GameSampleObserver
+    internal static class GameSampleObserver
     {
         public static void Startup()
         {

@@ -29,7 +29,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 移动组件类
     /// </summary>
     [GameEngine.DeclareComponentClass("MoveComponent")]
-    public class MoveComponent : GameEngine.CComponent, GameEngine.IUpdateActivation
+    internal class MoveComponent : GameEngine.CComponent, GameEngine.IUpdateActivation
     {
         public int escape_time;
 

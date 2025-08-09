@@ -28,7 +28,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 技能组件逻辑类
     /// </summary>
-    public static class SkillComponentSystem
+    static class SkillComponentSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
         static void Awake(this SkillComponent self)

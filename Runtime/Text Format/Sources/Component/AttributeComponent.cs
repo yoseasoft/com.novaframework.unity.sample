@@ -28,7 +28,7 @@ namespace GameEngine.Sample.TextFormat
     /// <summary>
     /// 属性组件类
     /// </summary>
-    public class AttributeComponent : GameEngine.CComponent
+    internal class AttributeComponent : GameEngine.CComponent
     {
         public int health;
         public int mana;

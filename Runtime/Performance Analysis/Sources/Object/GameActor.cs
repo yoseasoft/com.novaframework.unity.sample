@@ -30,7 +30,7 @@ namespace GameEngine.Sample.PerformanceAnalysis
     /// </summary>
     [GameEngine.DeclareActorClass("GameActor")]
     [GameEngine.EntityActivationComponent(typeof(GameAttributeComponent))]
-    public abstract class GameActor : GameEngine.CActor, GameEngine.IUpdateActivation
+    internal abstract class GameActor : GameEngine.CActor, GameEngine.IUpdateActivation
     {
         public int actor_count;
 

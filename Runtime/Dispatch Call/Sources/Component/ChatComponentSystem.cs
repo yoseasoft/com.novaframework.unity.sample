@@ -30,7 +30,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 聊天组件逻辑类
     /// </summary>
-    public static class ChatComponentSystem
+    static class ChatComponentSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
         static void Awake(this ChatComponent self)

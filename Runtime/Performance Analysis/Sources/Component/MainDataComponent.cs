@@ -31,7 +31,7 @@ namespace GameEngine.Sample.PerformanceAnalysis
     /// 主场景数据组件类
     /// </summary>
     [GameEngine.DeclareComponentClass("MainDataComponent")]
-    public class MainDataComponent : GameEngine.CComponent
+    internal class MainDataComponent : GameEngine.CComponent
     {
         public IList<NativePlayer> native_players = null;
 

@@ -30,7 +30,7 @@ namespace GameEngine.Sample.InversionOfControl
     /// </summary>
     [GameEngine.DeclareActorClass("Actor")]
     [GameEngine.EntityActivationComponent(typeof(AttributeComponent))]
-    public abstract class Actor : GameEngine.CActor, GameEngine.IUpdateActivation
+    internal abstract class Actor : GameEngine.CActor, GameEngine.IUpdateActivation
     {
         protected override void OnInitialize()
         {

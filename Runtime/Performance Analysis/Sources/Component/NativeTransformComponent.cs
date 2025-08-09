@@ -28,7 +28,7 @@ namespace GameEngine.Sample.PerformanceAnalysis
     /// <summary>
     /// 通过系统原生object实现的变换组件类
     /// </summary>
-    public class NativeTransformComponent : object
+    internal class NativeTransformComponent : object
     {
         public UnityEngine.Vector3 position;
 

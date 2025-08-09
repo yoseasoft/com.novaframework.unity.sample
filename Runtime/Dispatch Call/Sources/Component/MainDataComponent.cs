@@ -31,7 +31,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 主数据组件类
     /// </summary>
     [GameEngine.DeclareComponentClass("MainDataComponent")]
-    public class MainDataComponent : GameEngine.CComponent
+    internal class MainDataComponent : GameEngine.CComponent
     {
         public Player player = null;
 

@@ -28,7 +28,7 @@ namespace GameEngine.Sample.PerformanceAnalysis
     /// <summary>
     /// 通过系统原生object实现的玩家对象类
     /// </summary>
-    public class NativePlayer : NativeActor
+    internal class NativePlayer : NativeActor
     {
         public int player_count;
 

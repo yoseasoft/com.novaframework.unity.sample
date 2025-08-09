@@ -28,7 +28,7 @@ namespace GameEngine.Sample.PerformanceAnalysis
     /// <summary>
     /// 玩家对象逻辑类
     /// </summary>
-    public static class GamePlayerSystem
+    static class GamePlayerSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Initialize)]
         static void Initialize(this GamePlayer self)

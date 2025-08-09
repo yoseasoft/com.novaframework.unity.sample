@@ -31,7 +31,7 @@ namespace GameEngine.Sample.TextFormat
     /// 战斗对象基类
     /// </summary>
     [GameEngine.DeclareActorClass("Soldier")]
-    public class Soldier : Actor
+    internal class Soldier : Actor
     {
         private int tag;
         public SoldierBlockInfo blockInfo;

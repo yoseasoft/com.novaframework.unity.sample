@@ -31,7 +31,7 @@ namespace GameEngine.Sample.DispatchCall
     /// 技能组件类
     /// </summary>
     [GameEngine.DeclareComponentClass("SkillComponent")]
-    public class SkillComponent : GameEngine.CComponent
+    internal class SkillComponent : GameEngine.CComponent
     {
         public class Skill
         {

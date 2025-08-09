@@ -29,7 +29,7 @@ namespace GameEngine.Sample.ObjectLifecycle
     /// 玩家对象基类
     /// </summary>
     [GameEngine.DeclareActorClass("Player")]
-    public class Player : Actor
+    internal class Player : Actor
     {
         protected override void OnInitialize()
         {

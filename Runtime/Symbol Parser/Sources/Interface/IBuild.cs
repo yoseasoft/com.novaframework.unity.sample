@@ -28,7 +28,7 @@ namespace GameEngine.Sample.SymbolParser
     /// <summary>
     /// 构建接口类
     /// </summary>
-    public interface IBuild
+    internal interface IBuild
     {
         void OnBuild();
     }

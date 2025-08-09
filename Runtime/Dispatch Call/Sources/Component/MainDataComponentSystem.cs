@@ -28,7 +28,7 @@ namespace GameEngine.Sample.DispatchCall
     /// <summary>
     /// 主数据组件逻辑类
     /// </summary>
-    public static class MainDataComponentSystem
+    static class MainDataComponentSystem
     {
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
         static void Awake(this MainDataComponent self)
