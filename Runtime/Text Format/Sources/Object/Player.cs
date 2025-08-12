@@ -1,5 +1,5 @@
 /// -------------------------------------------------------------------------------
-/// NovaEngine Framework Samples
+/// Sample Module for GameEngine Framework
 ///
 /// Copyright (C) 2024 - 2025, Hurley, Independent Studio.
 /// Copyright (C) 2025, Hainan Yuanyou Information Tecdhnology Co., Ltd. Guangzhou Branch
