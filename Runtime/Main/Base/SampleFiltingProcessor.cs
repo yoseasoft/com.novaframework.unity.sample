@@ -35,7 +35,6 @@ namespace GameSample
         /// </summary>
         private readonly static bool IgnoreExternalGameModuleEnabled = true;
 
-        private readonly static string GameModuleName = typeof(SampleFiltingProcessor).Namespace.Substring(0, typeof(SampleFiltingProcessor).Namespace.IndexOf('.'));
         private readonly static string SampleModuleName = typeof(SampleFiltingProcessor).Namespace;
         private static string FilterModuleName = null;
 
@@ -77,7 +76,7 @@ namespace GameSample
                 {
                     return false;
                 }
-                if (ns.StartsWith(GameModuleName) && false == ns.StartsWith(SampleModuleName))
+                if (false == ns.StartsWith(SampleModuleName))
                 {
                     return false;
                 }
