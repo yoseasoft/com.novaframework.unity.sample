@@ -26,43 +26,39 @@
 namespace GameEngine.Sample
 {
     /// <summary>
-    /// 演示案例全局观察器类
+    /// 演示案例总控
     /// </summary>
-    internal static class GameSampleObserver
+    internal static partial class GameWorld
     {
         public static void Startup()
         {
-            StartGame();
         }
 
         public static void Shutdown()
         {
-            StopGame();
         }
 
         public static void FixedUpdate()
-        { }
-
-        public static void Update()
-        { }
-
-        public static void LateUpdate()
-        { }
-
-        public static void FixedExecute()
-        { }
-
-        public static void Execute()
-        { }
-
-        public static void LateExecute()
-        { }
-
-        private static void StartGame()
         {
         }
 
-        private static void StopGame()
+        public static void Update()
+        {
+        }
+
+        public static void LateUpdate()
+        {
+        }
+
+        public static void FixedExecute()
+        {
+        }
+
+        public static void Execute()
+        {
+        }
+
+        public static void LateExecute()
         {
         }
     }

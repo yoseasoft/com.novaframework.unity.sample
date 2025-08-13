@@ -28,14 +28,13 @@ namespace GameEngine.Sample
     /// <summary>
     /// 演示案例总控
     /// </summary>
-    internal static partial class GameSample
+    internal static partial class GameWorld
     {
         public static void Run()
         {
             SampleFiltingProcessor.AddSampleFilter(NovaEngine.Configuration.tutorialSampleType);
 
-            // RegAssemblyNames(typeof(GameSample).Namespace);
-            RegAssemblyNames(GameSampleMacros.AssemblyName);
+            RegAssemblyNames(GlobalMacros.AssemblyName);
 
             LoadAllAssemblies();
 

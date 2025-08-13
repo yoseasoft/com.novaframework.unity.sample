@@ -81,25 +81,25 @@ namespace GameEngine.Sample.ObjectLifecycle
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Update)]
         static void BeforeUpdate(this LeapAttackComponent self)
         {
-            if (GameSample.OnceTimeUpdateCallPassed(self)) GameEngine.Debugger.Info("目标跳斩组件实例{%t}前置刷新完成！", self);
+            if (GameWorld.OnceTimeUpdateCallPassed(self)) GameEngine.Debugger.Info("目标跳斩组件实例{%t}前置刷新完成！", self);
         }
 
         [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.Update)]
         static void AfterUpdate(this LeapAttackComponent self)
         {
-            if (GameSample.OnceTimeUpdateCallPassed(self)) GameEngine.Debugger.Info("目标跳斩组件实例{%t}后置刷新完成！", self);
+            if (GameWorld.OnceTimeUpdateCallPassed(self)) GameEngine.Debugger.Info("目标跳斩组件实例{%t}后置刷新完成！", self);
         }
 
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.LateUpdate)]
         static void BeforeLateUpdate(this LeapAttackComponent self)
         {
-            if (GameSample.OnceTimeUpdateCallPassed(self)) GameEngine.Debugger.Info("目标跳斩组件实例{%t}前置延迟刷新完成！", self);
+            if (GameWorld.OnceTimeUpdateCallPassed(self)) GameEngine.Debugger.Info("目标跳斩组件实例{%t}前置延迟刷新完成！", self);
         }
 
         [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.LateUpdate)]
         static void AfterLateUpdate(this LeapAttackComponent self)
         {
-            if (GameSample.OnceTimeUpdateCallPassed(self)) GameEngine.Debugger.Info("目标跳斩组件实例{%t}后置延迟刷新完成！", self);
+            if (GameWorld.OnceTimeUpdateCallPassed(self)) GameEngine.Debugger.Info("目标跳斩组件实例{%t}后置延迟刷新完成！", self);
         }
 
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Destroy)]

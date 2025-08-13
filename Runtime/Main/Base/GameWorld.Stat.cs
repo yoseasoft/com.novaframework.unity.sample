@@ -23,43 +23,64 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
+using System.Collections.Generic;
+
 namespace GameEngine.Sample
 {
     /// <summary>
     /// 演示案例总控
     /// </summary>
-    internal static partial class GameSample
+    internal static partial class GameWorld
     {
-        public static void Startup()
+        private static IDictionary<int, int> GameEntityUpdateCallStat = null;
+
+        /// <summary>
+        /// 一次性更新调度逻辑控制可行状态检测
+        /// </summary>
+        /// <param name="obj">对象实例</param>
+        /// <returns>满足一次性刷新调度条件</returns>
+        internal static bool OnceTimeUpdateCallPassed(object obj)
         {
+            if (!GlobalMacros.LoopOutputEnabled)
+            {
+                return false;
+            }
+
+            if (null == GameEntityUpdateCallStat)
+            {
+                GameEntityUpdateCallStat = new Dictionary<int, int>();
+            }
+
+            int hash = obj.GetHashCode();
+            int frame = NovaEngine.Timestamp.FrameCount;
+
+            if (false == GameEntityUpdateCallStat.TryGetValue(hash, out int v))
+            {
+                GameEntityUpdateCallStat.Add(hash, frame);
+                return true;
+            }
+
+            if (v == frame)
+            {
+                return true;
+            }
+
+            return false;
         }
 
-        public static void Shutdown()
+        /// <summary>
+        /// 每一帧更新调度逻辑控制可行状态检测
+        /// </summary>
+        /// <param name="obj">对象实例</param>
+        /// <returns>满足每一帧刷新调度条件</returns>
+        internal static bool EachFrameUpdateCallPassed(object obj)
         {
-        }
+            if (!GlobalMacros.LoopOutputEnabled)
+            {
+                return false;
+            }
 
-        public static void FixedUpdate()
-        {
-        }
-
-        public static void Update()
-        {
-        }
-
-        public static void LateUpdate()
-        {
-        }
-
-        public static void FixedExecute()
-        {
-        }
-
-        public static void Execute()
-        {
-        }
-
-        public static void LateExecute()
-        {
+            return false;
         }
     }
 }

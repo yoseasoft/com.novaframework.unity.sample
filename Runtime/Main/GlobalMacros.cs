@@ -23,64 +23,21 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace GameEngine.Sample
 {
     /// <summary>
-    /// 演示案例总控
+    /// 演示案例全局宏定义
     /// </summary>
-    internal static partial class GameSample
+    internal static class GlobalMacros
     {
-        private static IDictionary<int, int> GameEntityUpdateCallStat = null;
+        /// <summary>
+        /// 示例程序集名称
+        /// </summary>
+        internal const string AssemblyName = "Nova.Sample";
 
         /// <summary>
-        /// 一次性更新调度逻辑控制可行状态检测
+        /// 用于检测刷新接口中的日志输出的启用状态标识
         /// </summary>
-        /// <param name="obj">对象实例</param>
-        /// <returns>满足一次性刷新调度条件</returns>
-        internal static bool OnceTimeUpdateCallPassed(object obj)
-        {
-            if (!GameSampleMacros.LoopOutputEnabled)
-            {
-                return false;
-            }
-
-            if (null == GameEntityUpdateCallStat)
-            {
-                GameEntityUpdateCallStat = new Dictionary<int, int>();
-            }
-
-            int hash = obj.GetHashCode();
-            int frame = NovaEngine.Timestamp.FrameCount;
-
-            if (false == GameEntityUpdateCallStat.TryGetValue(hash, out int v))
-            {
-                GameEntityUpdateCallStat.Add(hash, frame);
-                return true;
-            }
-
-            if (v == frame)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        /// <summary>
-        /// 每一帧更新调度逻辑控制可行状态检测
-        /// </summary>
-        /// <param name="obj">对象实例</param>
-        /// <returns>满足每一帧刷新调度条件</returns>
-        internal static bool EachFrameUpdateCallPassed(object obj)
-        {
-            if (!GameSampleMacros.LoopOutputEnabled)
-            {
-                return false;
-            }
-
-            return false;
-        }
+        public readonly static bool LoopOutputEnabled = true;
     }
 }

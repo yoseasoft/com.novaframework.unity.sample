@@ -30,7 +30,7 @@ namespace GameEngine.Sample
     /// <summary>
     /// 演示案例总控
     /// </summary>
-    internal static partial class GameSample
+    internal static partial class GameWorld
     {
         private static IList<string> WaitingLoadAssemblyNames = null;
 

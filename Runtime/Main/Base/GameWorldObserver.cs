@@ -26,18 +26,44 @@
 namespace GameEngine.Sample
 {
     /// <summary>
-    /// 演示案例全局宏定义
+    /// 演示案例全局观察器类
     /// </summary>
-    internal static class GameSampleMacros
+    internal static class GameHubObserver
     {
-        /// <summary>
-        /// 示例程序集名称
-        /// </summary>
-        internal const string AssemblyName = "Nova.Sample";
+        public static void Startup()
+        {
+            StartGame();
+        }
 
-        /// <summary>
-        /// 用于检测刷新接口中的日志输出的启用状态标识
-        /// </summary>
-        public readonly static bool LoopOutputEnabled = true;
+        public static void Shutdown()
+        {
+            StopGame();
+        }
+
+        public static void FixedUpdate()
+        { }
+
+        public static void Update()
+        { }
+
+        public static void LateUpdate()
+        { }
+
+        public static void FixedExecute()
+        { }
+
+        public static void Execute()
+        { }
+
+        public static void LateExecute()
+        { }
+
+        private static void StartGame()
+        {
+        }
+
+        private static void StopGame()
+        {
+        }
     }
 }

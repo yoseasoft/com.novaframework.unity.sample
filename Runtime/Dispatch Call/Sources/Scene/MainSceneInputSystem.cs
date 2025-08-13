@@ -38,7 +38,7 @@ namespace GameEngine.Sample.DispatchCall
             MainScene main = GameEngine.SceneHandler.Instance.GetCurrentScene() as MainScene;
             Debugger.Assert(null != main, "Invalid activated scene.");
 
-            GameEngine.NetworkHandler.Instance.OnSimulationReceiveMessageComposedOfProtoBuf(new EnterWorldResp()
+            GameApi.OnSimulationReceiveMessageOfProtoBuf(new EnterWorldResp()
             {
                 Code = 1,
                 Player = MessageBuilder.CreatePlayerInfo(),
@@ -66,7 +66,7 @@ namespace GameEngine.Sample.DispatchCall
                 monsters.Add(monster);
             }
 
-            GameEngine.NetworkHandler.Instance.OnSimulationReceiveMessageComposedOfProtoBuf(new LevelSpawnResp()
+            GameApi.OnSimulationReceiveMessageOfProtoBuf(new LevelSpawnResp()
             {
                 Code = total,
                 MonsterList = monsters,
@@ -76,7 +76,7 @@ namespace GameEngine.Sample.DispatchCall
         [GameEngine.OnInputDispatchCall((int) UnityEngine.KeyCode.Q, GameEngine.InputOperationType.Released)]
         static void OnLeaveWorldMessageSend(int keycode, int operationType)
         {
-            GameEngine.NetworkHandler.Instance.OnSimulationReceiveMessageComposedOfProtoBuf(new LeaveWorldResp()
+            GameApi.OnSimulationReceiveMessageOfProtoBuf(new LeaveWorldResp()
             {
                 Code = 0,
             });
