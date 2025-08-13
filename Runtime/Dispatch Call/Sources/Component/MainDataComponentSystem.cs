@@ -23,7 +23,7 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DispatchCall
+namespace GameSample.DispatchCall
 {
     /// <summary>
     /// 主数据组件逻辑类
@@ -52,7 +52,7 @@ namespace GameEngine.Sample.DispatchCall
                     IdentityComponent identityComponent = monster.GetComponent<IdentityComponent>();
 
                     // 发送死亡通知
-                    GameApi.OnSimulationReceiveMessageOfProtoBuf(new ActorDieResp() { Uid = identityComponent.objectID });
+                    GameEngine.GameApi.OnSimulationReceiveMessageOfProtoBuf(new ActorDieResp() { Uid = identityComponent.objectID });
                 }
             }
         }

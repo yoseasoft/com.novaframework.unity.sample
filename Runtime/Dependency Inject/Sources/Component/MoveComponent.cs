@@ -23,13 +23,13 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 移动组件类
     /// </summary>
-    [DeclareComponentClass("MoveComponent")]
-    internal class MoveComponent : CComponent
+    [GameEngine.DeclareComponentClass("MoveComponent")]
+    internal class MoveComponent : GameEngine.CComponent
     {
         public float speed;
     }

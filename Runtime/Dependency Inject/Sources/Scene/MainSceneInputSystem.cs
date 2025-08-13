@@ -33,14 +33,14 @@ using SystemFileStream = System.IO.FileStream;
 using SystemMemoryStream = System.IO.MemoryStream;
 using SystemSeekOrigin = System.IO.SeekOrigin;
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 主场景输入逻辑类
     /// </summary>
     static class MainSceneInputSystem
     {
-        [InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha1, InputOperationType.Released)]
+        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha1, GameEngine.InputOperationType.Released)]
         static void OnConfigureFileLoadNotify(this MainScene self, int keycode, int operationType)
         {
             /*
@@ -66,7 +66,7 @@ namespace GameEngine.Sample.DependencyInject
             });
             */
 
-            GameLibrary.ReloadBeanConfigure((path, ms) =>
+            GameEngine.GameLibrary.ReloadBeanConfigure((path, ms) =>
             {
                 if (string.IsNullOrEmpty(path))
                     path = @"main";
@@ -80,14 +80,14 @@ namespace GameEngine.Sample.DependencyInject
             });
         }
 
-        [InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha2, InputOperationType.Released)]
+        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha2, GameEngine.InputOperationType.Released)]
         static void OnBeanObjectGenerateNotify(this MainScene self, int keycode, int operationType)
         {
             MainDataComponent mainDataComponent = self.GetComponent<MainDataComponent>();
             if (null != mainDataComponent.targetObject)
             {
                 Debugger.Info($"成功销毁名为{mainDataComponent.targetObject.BeanName}的Bean对象实例！");
-                ApplicationContext.ReleaseBean(mainDataComponent.targetObject);
+                GameEngine.ApplicationContext.ReleaseBean(mainDataComponent.targetObject);
                 mainDataComponent.targetObject = null;
                 return;
             }
@@ -102,11 +102,11 @@ namespace GameEngine.Sample.DependencyInject
             int r = NovaEngine.Utility.Random.GetRandom(beanNames.Count);
             string beanName = beanNames[r];
 
-            mainDataComponent.targetObject = ApplicationContext.CreateBean(beanName) as CActor;
+            mainDataComponent.targetObject = GameEngine.ApplicationContext.CreateBean(beanName) as GameEngine.CActor;
             Debugger.Info($"成功创建名为{beanName}的Bean对象实例！");
         }
 
-        [InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha3, InputOperationType.Released)]
+        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha3, GameEngine.InputOperationType.Released)]
         static void OnBeanObjectPrintNotify(this MainScene self, int keycode, int operationType)
         {
             MainDataComponent mainDataComponent = self.GetComponent<MainDataComponent>();
@@ -116,17 +116,17 @@ namespace GameEngine.Sample.DependencyInject
                 return;
             }
 
-            CActor actor = mainDataComponent.targetObject;
+            GameEngine.CActor actor = mainDataComponent.targetObject;
 
             SystemStringBuilder sb = new SystemStringBuilder();
             sb.Append($"类型={NovaEngine.Utility.Text.GetFullName(actor.GetType())}，");
             sb.Append($"名称={actor.BeanName}，");
 
-            IList<CComponent> components = actor.GetAllComponents();
+            IList<GameEngine.CComponent> components = actor.GetAllComponents();
             sb.Append("组件列表={");
             for (int n = 0; null != components && n < components.Count; ++n)
             {
-                CComponent component = components[n];
+                GameEngine.CComponent component = components[n];
                 if (n > 0) sb.Append('，');
                 sb.Append($"{n}={NovaEngine.Utility.Text.GetFullName(component.GetType())}");
             }

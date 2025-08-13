@@ -25,7 +25,7 @@
 
 using System.Collections.Generic;
 
-namespace GameEngine.Sample
+namespace GameSample
 {
     /// <summary>
     /// 演示案例总控

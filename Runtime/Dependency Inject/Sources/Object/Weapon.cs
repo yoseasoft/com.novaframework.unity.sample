@@ -23,13 +23,13 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 武器对象基类
     /// </summary>
-    [DeclareObjectClass("Weapon")]
-    internal class Weapon : CObject
+    [GameEngine.DeclareObjectClass("Weapon")]
+    internal class Weapon : GameEngine.CObject
     {
     }
 }

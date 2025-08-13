@@ -23,13 +23,13 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 身份组件类
     /// </summary>
-    [DeclareComponentClass("IdentityComponent")]
-    internal class IdentityComponent : CComponent
+    [GameEngine.DeclareComponentClass("IdentityComponent")]
+    internal class IdentityComponent : GameEngine.CComponent
     {
         public int objectID;
 

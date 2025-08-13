@@ -23,13 +23,13 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 攻击组件类
     /// </summary>
-    [DeclareComponentClass("AttackComponent")]
-    internal class AttackComponent : CComponent
+    [GameEngine.DeclareComponentClass("AttackComponent")]
+    internal class AttackComponent : GameEngine.CComponent
     {
         public Weapon weapon;
     }

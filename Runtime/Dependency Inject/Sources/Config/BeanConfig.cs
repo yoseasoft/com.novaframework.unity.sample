@@ -25,7 +25,7 @@
 
 using System.Collections.Generic;
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// Bean配置数据管理类

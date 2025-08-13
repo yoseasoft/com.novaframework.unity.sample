@@ -23,7 +23,7 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.PerformanceAnalysis
+namespace GameSample.PerformanceAnalysis
 {
     /// <summary>
     /// 案例入口类

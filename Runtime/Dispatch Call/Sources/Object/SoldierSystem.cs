@@ -25,7 +25,7 @@
 
 using SystemStringBuilder = System.Text.StringBuilder;
 
-namespace GameEngine.Sample.DispatchCall
+namespace GameSample.DispatchCall
 {
     /// <summary>
     /// 战斗对象逻辑类

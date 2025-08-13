@@ -23,12 +23,12 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 玩家对象基类
     /// </summary>
-    [DeclareActorClass("Player")]
+    [GameEngine.DeclareActorClass("Player")]
     internal class Player : Soldier
     {
         public Buff buff;

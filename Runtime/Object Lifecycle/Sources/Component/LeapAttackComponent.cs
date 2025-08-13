@@ -23,7 +23,7 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.ObjectLifecycle
+namespace GameSample.ObjectLifecycle
 {
     /// <summary>
     /// 跳斩组件类

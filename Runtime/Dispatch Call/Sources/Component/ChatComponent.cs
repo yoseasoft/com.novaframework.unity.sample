@@ -25,7 +25,7 @@
 
 using System.Collections.Generic;
 
-namespace GameEngine.Sample.DispatchCall
+namespace GameSample.DispatchCall
 {
     /// <summary>
     /// 聊天组件类

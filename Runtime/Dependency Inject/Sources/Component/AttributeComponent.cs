@@ -23,13 +23,13 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 属性组件类
     /// </summary>
-    [DeclareComponentClass("AttributeComponent")]
-    internal class AttributeComponent : CComponent
+    [GameEngine.DeclareComponentClass("AttributeComponent")]
+    internal class AttributeComponent : GameEngine.CComponent
     {
         public int health;
 

@@ -23,14 +23,14 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 角色对象基类
     /// </summary>
-    [DeclareActorClass("Actor")]
-    [EntityActivationComponent(typeof(IdentityComponent))]
-    internal abstract class Actor : CActor
+    [GameEngine.DeclareActorClass("Actor")]
+    [GameEngine.EntityActivationComponent(typeof(IdentityComponent))]
+    internal abstract class Actor : GameEngine.CActor
     {
     }
 }

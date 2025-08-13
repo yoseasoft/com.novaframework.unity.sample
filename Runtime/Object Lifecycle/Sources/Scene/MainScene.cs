@@ -23,7 +23,7 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.ObjectLifecycle
+namespace GameSample.ObjectLifecycle
 {
     /// <summary>
     /// 主场景类

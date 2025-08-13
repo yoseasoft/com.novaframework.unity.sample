@@ -25,13 +25,13 @@
 
 using System.Collections.Generic;
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 技能组件类
     /// </summary>
-    [DeclareComponentClass("SkillComponent")]
-    internal class SkillComponent : CComponent
+    [GameEngine.DeclareComponentClass("SkillComponent")]
+    internal class SkillComponent : GameEngine.CComponent
     {
         public class SkillInfo
         {

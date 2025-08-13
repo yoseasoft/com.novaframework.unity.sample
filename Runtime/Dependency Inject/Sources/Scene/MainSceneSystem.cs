@@ -23,34 +23,34 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 主场景逻辑类
     /// </summary>
     static class MainSceneSystem
     {
-        [OnAspectBeforeCall(AspectBehaviourType.Awake)]
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
         static void Awake(this MainScene self)
         {
         }
 
-        [OnAspectBeforeCall(AspectBehaviourType.Start)]
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Start)]
         static void Start(this MainScene self)
         {
         }
 
-        [OnAspectBeforeCall(AspectBehaviourType.Update)]
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Update)]
         static void Update(this MainScene self)
         {
         }
 
-        [OnAspectBeforeCall(AspectBehaviourType.LateUpdate)]
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.LateUpdate)]
         static void LateUpdate(this MainScene self)
         {
         }
 
-        [OnAspectAfterCall(AspectBehaviourType.Destroy)]
+        [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.Destroy)]
         static void Destroy(this MainScene self)
         {
         }

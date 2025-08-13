@@ -23,14 +23,14 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 主场景类
     /// </summary>
-    [DeclareSceneClass("Main")]
-    [EntityActivationComponent(typeof(MainDataComponent))]
-    internal class MainScene : CScene
+    [GameEngine.DeclareSceneClass("Main")]
+    [GameEngine.EntityActivationComponent(typeof(MainDataComponent))]
+    internal class MainScene : GameEngine.CScene
     {
     }
 }

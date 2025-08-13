@@ -23,13 +23,13 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 变换组件类
     /// </summary>
-    [DeclareComponentClass("TransformComponent")]
-    internal class TransformComponent : CComponent
+    [GameEngine.DeclareComponentClass("TransformComponent")]
+    internal class TransformComponent : GameEngine.CComponent
     {
         public UnityEngine.Vector3 position;
     }

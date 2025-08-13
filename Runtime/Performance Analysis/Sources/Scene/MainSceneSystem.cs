@@ -27,7 +27,7 @@ using System.Collections.Generic;
 
 using SystemStringBuilder = System.Text.StringBuilder;
 
-namespace GameEngine.Sample.PerformanceAnalysis
+namespace GameSample.PerformanceAnalysis
 {
     /// <summary>
     /// 主场景逻辑类

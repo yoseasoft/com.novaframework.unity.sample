@@ -23,13 +23,13 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 弓箭哥布林的AI组件类
     /// </summary>
-    [DeclareComponentClass("GoblinAiWithBowComponent")]
-    internal class GoblinAiWithBowComponent : CComponent
+    [GameEngine.DeclareComponentClass("GoblinAiWithBowComponent")]
+    internal class GoblinAiWithBowComponent : GameEngine.CComponent
     {
     }
 }

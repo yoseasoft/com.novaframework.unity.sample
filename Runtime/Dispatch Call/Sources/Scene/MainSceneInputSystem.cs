@@ -25,7 +25,7 @@
 
 using System.Collections.Generic;
 
-namespace GameEngine.Sample.DispatchCall
+namespace GameSample.DispatchCall
 {
     /// <summary>
     /// 主场景输入逻辑类
@@ -38,7 +38,7 @@ namespace GameEngine.Sample.DispatchCall
             MainScene main = GameEngine.SceneHandler.Instance.GetCurrentScene() as MainScene;
             Debugger.Assert(null != main, "Invalid activated scene.");
 
-            GameApi.OnSimulationReceiveMessageOfProtoBuf(new EnterWorldResp()
+            GameEngine.GameApi.OnSimulationReceiveMessageOfProtoBuf(new EnterWorldResp()
             {
                 Code = 1,
                 Player = MessageBuilder.CreatePlayerInfo(),
@@ -66,7 +66,7 @@ namespace GameEngine.Sample.DispatchCall
                 monsters.Add(monster);
             }
 
-            GameApi.OnSimulationReceiveMessageOfProtoBuf(new LevelSpawnResp()
+            GameEngine.GameApi.OnSimulationReceiveMessageOfProtoBuf(new LevelSpawnResp()
             {
                 Code = total,
                 MonsterList = monsters,
@@ -76,7 +76,7 @@ namespace GameEngine.Sample.DispatchCall
         [GameEngine.OnInputDispatchCall((int) UnityEngine.KeyCode.Q, GameEngine.InputOperationType.Released)]
         static void OnLeaveWorldMessageSend(int keycode, int operationType)
         {
-            GameApi.OnSimulationReceiveMessageOfProtoBuf(new LeaveWorldResp()
+            GameEngine.GameApi.OnSimulationReceiveMessageOfProtoBuf(new LeaveWorldResp()
             {
                 Code = 0,
             });

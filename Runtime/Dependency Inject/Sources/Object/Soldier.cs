@@ -23,15 +23,15 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 战斗对象基类
     /// </summary>
-    [DeclareActorClass("Soldier")]
-    [EntityActivationComponent(typeof(AttributeComponent))]
-    [EntityActivationComponent(typeof(TransformComponent))]
-    [EntityActivationComponent(typeof(MoveComponent))]
+    [GameEngine.DeclareActorClass("Soldier")]
+    [GameEngine.EntityActivationComponent(typeof(AttributeComponent))]
+    [GameEngine.EntityActivationComponent(typeof(TransformComponent))]
+    [GameEngine.EntityActivationComponent(typeof(MoveComponent))]
     internal class Soldier : Actor
     {
     }

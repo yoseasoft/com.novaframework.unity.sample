@@ -25,7 +25,7 @@
 
 using System.Collections.Generic;
 
-namespace GameEngine.Sample.TextFormat
+namespace GameSample.TextFormat
 {
     /// <summary>
     /// 战斗对象基类

@@ -23,7 +23,7 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 案例入口类
@@ -32,7 +32,7 @@ namespace GameEngine.Sample.DependencyInject
     {
         public static void Run()
         {
-            GameApi.ReplaceScene<MainScene>();
+            GameEngine.GameApi.ReplaceScene<MainScene>();
         }
 
         public static void Stop()

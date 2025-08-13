@@ -23,7 +23,7 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.InversionOfControl
+namespace GameSample.InversionOfControl
 {
     /// <summary>
     /// 案例入口类

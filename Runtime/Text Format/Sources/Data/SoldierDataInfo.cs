@@ -23,7 +23,7 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.TextFormat
+namespace GameSample.TextFormat
 {
     /// <summary>
     /// 士兵块信息

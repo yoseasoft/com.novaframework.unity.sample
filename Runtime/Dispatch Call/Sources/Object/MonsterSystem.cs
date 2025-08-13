@@ -27,7 +27,7 @@ using System.Collections.Generic;
 
 using SystemStringBuilder = System.Text.StringBuilder;
 
-namespace GameEngine.Sample.DispatchCall
+namespace GameSample.DispatchCall
 {
     /// <summary>
     /// 怪物对象逻辑类
@@ -66,7 +66,7 @@ namespace GameEngine.Sample.DispatchCall
             infos[4] = "骑行";
 
             int index = NovaEngine.Utility.Random.GetRandom(infos.Length);
-            GameApi.OnSimulationReceiveMessageOfProtoBuf(new ActorChatResp()
+            GameEngine.GameApi.OnSimulationReceiveMessageOfProtoBuf(new ActorChatResp()
             {
                 ChatList = new List<ChatInfo>()
                 {

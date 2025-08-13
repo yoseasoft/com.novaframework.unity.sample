@@ -23,12 +23,12 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 怪物对象基类
     /// </summary>
-    [DeclareActorClass("Monster")]
+    [GameEngine.DeclareActorClass("Monster")]
     internal class Monster : Soldier
     {
     }

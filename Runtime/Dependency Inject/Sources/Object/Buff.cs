@@ -23,13 +23,13 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// Buff对象基类
     /// </summary>
-    [DeclareObjectClass("Buff")]
-    internal class Buff : CObject
+    [GameEngine.DeclareObjectClass("Buff")]
+    internal class Buff : GameEngine.CObject
     {
     }
 }

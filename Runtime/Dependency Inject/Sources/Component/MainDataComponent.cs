@@ -23,14 +23,14 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameEngine.Sample.DependencyInject
+namespace GameSample.DependencyInject
 {
     /// <summary>
     /// 主场景数据组件类
     /// </summary>
-    [DeclareComponentClass("MainDataComponent")]
-    internal class MainDataComponent : CComponent
+    [GameEngine.DeclareComponentClass("MainDataComponent")]
+    internal class MainDataComponent : GameEngine.CComponent
     {
-        public CActor targetObject;
+        public GameEngine.CActor targetObject;
     }
 }
