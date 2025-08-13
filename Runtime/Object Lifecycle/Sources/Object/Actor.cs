@@ -29,7 +29,7 @@ namespace GameEngine.Sample.ObjectLifecycle
     /// 角色对象基类
     /// </summary>
     [GameEngine.DeclareActorClass("Actor")]
-    internal abstract class Actor : GameEngine.CActor, GameEngine.IUpdateActivation
+    internal abstract class Actor : GameEngine.CActor
     {
         protected override void OnInitialize()
         {

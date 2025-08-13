@@ -31,7 +31,7 @@ namespace GameEngine.Sample.DispatchCall
     [GameEngine.DeclareActorClass("Actor")]
     [GameEngine.EntityActivationComponent(typeof(IdentityComponent))]
     [GameEngine.EntityActivationComponent(typeof(AttributeComponent))]
-    internal abstract class Actor : GameEngine.CActor, GameEngine.IUpdateActivation
+    internal abstract class Actor : GameEngine.CActor
     {
     }
 }

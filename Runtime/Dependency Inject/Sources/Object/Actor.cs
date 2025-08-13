@@ -30,7 +30,7 @@ namespace GameEngine.Sample.DependencyInject
     /// </summary>
     [DeclareActorClass("Actor")]
     [EntityActivationComponent(typeof(IdentityComponent))]
-    internal abstract class Actor : CActor, GameEngine.IUpdateActivation
+    internal abstract class Actor : CActor
     {
     }
 }
