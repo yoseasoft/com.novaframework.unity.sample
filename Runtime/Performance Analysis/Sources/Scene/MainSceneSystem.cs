@@ -260,7 +260,7 @@ namespace GameSample.PerformanceAnalysis
 
         static void PrintUsage()
         {
-            Debugger.Info(@"使用说明：①创建演示数据；②调度演示数据；③打印演示数据；④重置演示数据；⑤清除演示数据；");
+            Debugger.Info(@"使用说明：①创建演示数据；②调度演示数据；③打印演示数据；④重置演示数据；⑤清除演示数据；⑥其它测试用例；");
         }
     }
 }

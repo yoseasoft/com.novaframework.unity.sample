@@ -82,7 +82,7 @@ namespace GameSample
                 }
             }
 
-            // 排除掉 Game.Sample 中的类
+            // 排除掉 GameSample 中的类
             // if (ns.StartsWith(SampleModuleName) && (string.Equals(ns, SampleModuleName, System.StringComparison.Ordinal) || false == string.Equals(ns, FilterModuleName, System.StringComparison.Ordinal))) { }
             if (ns.StartsWith(SampleModuleName) && false == string.Equals(ns, FilterModuleName, System.StringComparison.Ordinal))
             {
