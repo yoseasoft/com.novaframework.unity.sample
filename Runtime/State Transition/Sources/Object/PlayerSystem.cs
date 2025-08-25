@@ -60,12 +60,13 @@ namespace GameSample.StateTransition
         }
 
         [GameEngine.StateTransitionBindingOfTarget("Attack", GameEngine.StateAccessType.Update)]
-        static void OnAttackUpdate(this Player self)
+        static void OnAttackUpdate(this Player self, GameEngine.StateGraph stateGraph)
         {
             AttackComponent attackComponent = self.GetComponent<AttackComponent>();
             if (attackComponent.is_attacking)
                 return;
 
+            Debugger.Info("【{%s}】当前状态完成：{%s}！", self.GetComponent<AttributeComponent>().name, stateGraph.CurrentState);
             self.StateFinished();
         }
 
