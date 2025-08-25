@@ -23,7 +23,7 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameSample.DispatchCall
+namespace GameSample.StateTransition
 {
     /// <summary>
     /// 属性组件类
@@ -31,31 +31,6 @@ namespace GameSample.DispatchCall
     [GameEngine.DeclareComponentClass("AttributeComponent")]
     internal class AttributeComponent : GameEngine.CComponent
     {
-        public int level;
-
-        public int exp;
-
-        public int health;
-
-        public int energy;
-
-        public int attack;
-
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfo(int eventID, params object[] args)
-        {
-            Debugger.Info("基于带参普通成员函数‘OnDisplayInfo’调用, 打印信息：{%s}", ToString());
-        }
-
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfoWithNullParameter()
-        {
-            Debugger.Info("基于无参普通成员函数‘OnDisplayInfoWithNullParameter’调用, 打印信息：{%s}", ToString());
-        }
-
-        public override string ToString()
-        {
-            return $"Level={level},Exp={exp},Health={health},Energy={energy},Attack={attack}";
-        }
+        public string name;
     }
 }

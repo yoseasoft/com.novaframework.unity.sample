@@ -23,39 +23,25 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameSample.DispatchCall
+namespace GameSample.StateTransition
 {
     /// <summary>
-    /// 属性组件类
+    /// 呼喊组件逻辑类
     /// </summary>
-    [GameEngine.DeclareComponentClass("AttributeComponent")]
-    internal class AttributeComponent : GameEngine.CComponent
+    static class ShoutComponentSystem
     {
-        public int level;
-
-        public int exp;
-
-        public int health;
-
-        public int energy;
-
-        public int attack;
-
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfo(int eventID, params object[] args)
+        public static void ShoutingRandomContent(this ShoutComponent self)
         {
-            Debugger.Info("基于带参普通成员函数‘OnDisplayInfo’调用, 打印信息：{%s}", ToString());
-        }
+            if (null == self.shout_contents)
+            {
+                Debugger.Warn("角色【{%s}】的呼喊内容列表不能为空！", self.GetComponent<AttributeComponent>().name);
+                return;
+            }
 
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfoWithNullParameter()
-        {
-            Debugger.Info("基于无参普通成员函数‘OnDisplayInfoWithNullParameter’调用, 打印信息：{%s}", ToString());
-        }
+            int r = NovaEngine.Utility.Random.GetRandom(self.shout_contents.Count);
+            string text = self.shout_contents[r];
 
-        public override string ToString()
-        {
-            return $"Level={level},Exp={exp},Health={health},Energy={energy},Attack={attack}";
+            Debugger.Info("角色【{%s}】大喊：{%s}。", self.GetComponent<AttributeComponent>().name, text);
         }
     }
 }

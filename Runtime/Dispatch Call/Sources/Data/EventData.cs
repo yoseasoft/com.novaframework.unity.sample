@@ -30,6 +30,7 @@ namespace GameSample.DispatchCall
     /// </summary>
     internal static class EventNotify
     {
+        public const int DisplayAttribute = 101;
         public const int PlayerDisplayInfo = 1101;
         public const int PlayerSearchAllEnemies = 1102; // 检索所有敌方单位
         public const int PlayerLockOneTarget = 1103; // 锁定一个目标

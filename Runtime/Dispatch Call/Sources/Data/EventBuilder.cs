@@ -71,5 +71,11 @@ namespace GameSample.DispatchCall
         {
             GameEngine.GameApi.Send(EventNotify.PlayerChaseTarget);
         }
+
+        [GameEngine.OnInputDispatchCall((int) UnityEngine.KeyCode.Alpha6, GameEngine.InputOperationType.Released)]
+        static void OnActorAttributeDisplayEventSend(int keycode, int operationType)
+        {
+            GameEngine.GameApi.Send(EventNotify.DisplayAttribute);
+        }
     }
 }

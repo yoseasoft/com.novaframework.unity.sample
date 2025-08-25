@@ -23,39 +23,22 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameSample.DispatchCall
+namespace GameSample.StateTransition
 {
     /// <summary>
-    /// 属性组件类
+    /// 移动组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("AttributeComponent")]
-    internal class AttributeComponent : GameEngine.CComponent
+    [GameEngine.DeclareComponentClass("MoveComponent")]
+    internal class MoveComponent : GameEngine.CComponent
     {
-        public int level;
+        public float move_length;
 
-        public int exp;
+        public float move_speed;
 
-        public int health;
+        public float move_duration;
 
-        public int energy;
+        public float last_move_time;
 
-        public int attack;
-
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfo(int eventID, params object[] args)
-        {
-            Debugger.Info("基于带参普通成员函数‘OnDisplayInfo’调用, 打印信息：{%s}", ToString());
-        }
-
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfoWithNullParameter()
-        {
-            Debugger.Info("基于无参普通成员函数‘OnDisplayInfoWithNullParameter’调用, 打印信息：{%s}", ToString());
-        }
-
-        public override string ToString()
-        {
-            return $"Level={level},Exp={exp},Health={health},Energy={energy},Attack={attack}";
-        }
+        public bool is_moving;
     }
 }

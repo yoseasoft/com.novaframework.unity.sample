@@ -30,5 +30,16 @@ namespace GameSample.DispatchCall
     /// </summary>
     static class AttributeComponentSystem
     {
+        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
+        static void OnDisplayInfo(this AttributeComponent self, int eventID, params object[] args)
+        {
+            Debugger.Info("基于带参扩展成员函数‘OnDisplayInfo’调用, 打印信息：{%s}", self.ToString());
+        }
+
+        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
+        static void OnDisplayInfoWithNullParameter(this AttributeComponent self)
+        {
+            Debugger.Info("基于无参扩展成员函数‘OnDisplayInfoWithNullParameter’调用, 打印信息：{%s}", self.ToString());
+        }
     }
 }

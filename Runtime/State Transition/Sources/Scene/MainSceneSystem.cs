@@ -23,39 +23,26 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameSample.DispatchCall
+using System.Collections.Generic;
+
+using SystemStringBuilder = System.Text.StringBuilder;
+
+namespace GameSample.StateTransition
 {
     /// <summary>
-    /// 属性组件类
+    /// 主场景逻辑类
     /// </summary>
-    [GameEngine.DeclareComponentClass("AttributeComponent")]
-    internal class AttributeComponent : GameEngine.CComponent
+    static class MainSceneSystem
     {
-        public int level;
-
-        public int exp;
-
-        public int health;
-
-        public int energy;
-
-        public int attack;
-
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfo(int eventID, params object[] args)
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Start)]
+        static void OnStart(this MainScene self)
         {
-            Debugger.Info("基于带参普通成员函数‘OnDisplayInfo’调用, 打印信息：{%s}", ToString());
+            self.PrintUsage();
         }
 
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfoWithNullParameter()
+        public static void PrintUsage(this MainScene self)
         {
-            Debugger.Info("基于无参普通成员函数‘OnDisplayInfoWithNullParameter’调用, 打印信息：{%s}", ToString());
-        }
-
-        public override string ToString()
-        {
-            return $"Level={level},Exp={exp},Health={health},Energy={energy},Attack={attack}";
+            Debugger.Info(@"使用说明：①创建演示数据；②随机角色移动；③玩家攻击演示；④清除演示数据；");
         }
     }
 }

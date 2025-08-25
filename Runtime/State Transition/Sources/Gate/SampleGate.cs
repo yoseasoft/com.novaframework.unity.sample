@@ -23,39 +23,20 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameSample.DispatchCall
+namespace GameSample.StateTransition
 {
     /// <summary>
-    /// 属性组件类
+    /// 案例入口类
     /// </summary>
-    [GameEngine.DeclareComponentClass("AttributeComponent")]
-    internal class AttributeComponent : GameEngine.CComponent
+    internal static class SampleGate
     {
-        public int level;
-
-        public int exp;
-
-        public int health;
-
-        public int energy;
-
-        public int attack;
-
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfo(int eventID, params object[] args)
+        public static void Run()
         {
-            Debugger.Info("基于带参普通成员函数‘OnDisplayInfo’调用, 打印信息：{%s}", ToString());
+            GameEngine.SceneHandler.Instance.ReplaceScene<MainScene>();
         }
 
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfoWithNullParameter()
+        public static void Stop()
         {
-            Debugger.Info("基于无参普通成员函数‘OnDisplayInfoWithNullParameter’调用, 打印信息：{%s}", ToString());
-        }
-
-        public override string ToString()
-        {
-            return $"Level={level},Exp={exp},Health={health},Energy={energy},Attack={attack}";
         }
     }
 }

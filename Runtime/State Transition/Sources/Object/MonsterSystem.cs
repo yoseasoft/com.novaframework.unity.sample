@@ -23,39 +23,38 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameSample.DispatchCall
+using System.Collections.Generic;
+
+using SystemStringBuilder = System.Text.StringBuilder;
+
+namespace GameSample.StateTransition
 {
     /// <summary>
-    /// 属性组件类
+    /// 怪物对象逻辑类
     /// </summary>
-    [GameEngine.DeclareComponentClass("AttributeComponent")]
-    internal class AttributeComponent : GameEngine.CComponent
+    static class MonsterSystem
     {
-        public int level;
-
-        public int exp;
-
-        public int health;
-
-        public int energy;
-
-        public int attack;
-
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfo(int eventID, params object[] args)
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
+        static void Awake(this Monster self)
         {
-            Debugger.Info("基于带参普通成员函数‘OnDisplayInfo’调用, 打印信息：{%s}", ToString());
         }
 
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfoWithNullParameter()
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Start)]
+        static void Start(this Monster self)
         {
-            Debugger.Info("基于无参普通成员函数‘OnDisplayInfoWithNullParameter’调用, 打印信息：{%s}", ToString());
         }
 
-        public override string ToString()
+        [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.Destroy)]
+        static void Destroy(this Monster self)
         {
-            return $"Level={level},Exp={exp},Health={health},Energy={energy},Attack={attack}";
+        }
+
+        [GameEngine.EventSubscribeBindingOfTarget(typeof(HitForTarget))]
+        static void ShoutingInPain(this Monster self, HitForTarget eventData)
+        {
+            Debugger.Info("【{%s}】被【{%s}】打中了。", self.GetComponent<AttributeComponent>().name, eventData.invader);
+
+            self.GetComponent<ShoutComponent>().ShoutingRandomContent();
         }
     }
 }

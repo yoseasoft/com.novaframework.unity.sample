@@ -23,39 +23,26 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameSample.DispatchCall
+namespace GameSample.StateTransition
 {
     /// <summary>
-    /// 属性组件类
+    /// 角色对象逻辑类
     /// </summary>
-    [GameEngine.DeclareComponentClass("AttributeComponent")]
-    internal class AttributeComponent : GameEngine.CComponent
+    static class ActorSystem
     {
-        public int level;
-
-        public int exp;
-
-        public int health;
-
-        public int energy;
-
-        public int attack;
-
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfo(int eventID, params object[] args)
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
+        static void Awake(this Actor self)
         {
-            Debugger.Info("基于带参普通成员函数‘OnDisplayInfo’调用, 打印信息：{%s}", ToString());
         }
 
-        [GameEngine.EventSubscribeBindingOfTarget(EventNotify.DisplayAttribute)]
-        public void OnDisplayInfoWithNullParameter()
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Start)]
+        static void Start(this Actor self)
         {
-            Debugger.Info("基于无参普通成员函数‘OnDisplayInfoWithNullParameter’调用, 打印信息：{%s}", ToString());
         }
 
-        public override string ToString()
+        [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.Destroy)]
+        static void Destroy(this Actor self)
         {
-            return $"Level={level},Exp={exp},Health={health},Energy={energy},Attack={attack}";
         }
     }
 }
