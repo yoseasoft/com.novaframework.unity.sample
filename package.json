@@ -2,7 +2,7 @@
   "name": "com.novaframework.unity.sample",
   "displayName": "NovaFramework.Sample",
   "description": "The sample case of function module for NovaFramework",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2018.3",
   "unityRelease": "0f1",
   "license": "MIT",

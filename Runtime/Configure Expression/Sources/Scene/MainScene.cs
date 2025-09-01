@@ -23,22 +23,14 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameSample.StateTransition
+namespace GameSample.ConfigureExpression
 {
     /// <summary>
-    /// 主场景逻辑类
+    /// 主场景类
     /// </summary>
-    static class MainSceneSystem
+    [GameEngine.DeclareSceneClass("Main")]
+    [GameEngine.EntityActivationComponent(typeof(MainDataComponent))]
+    internal class MainScene : GameEngine.CScene
     {
-        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Start)]
-        static void OnStart(this MainScene self)
-        {
-            self.PrintUsage();
-        }
-
-        public static void PrintUsage(this MainScene self)
-        {
-            Debugger.Info(@"使用说明：①创建演示数据；②随机角色移动；③玩家攻击演示；④清除演示数据；");
-        }
     }
 }

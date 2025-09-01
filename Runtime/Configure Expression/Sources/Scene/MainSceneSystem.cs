@@ -23,7 +23,7 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameSample.StateTransition
+namespace GameSample.ConfigureExpression
 {
     /// <summary>
     /// 主场景逻辑类

@@ -23,22 +23,20 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameSample.StateTransition
+namespace GameSample.ConfigureExpression
 {
     /// <summary>
-    /// 主场景逻辑类
+    /// 案例入口类
     /// </summary>
-    static class MainSceneSystem
+    internal static class SampleGate
     {
-        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Start)]
-        static void OnStart(this MainScene self)
+        public static void Run()
         {
-            self.PrintUsage();
+            GameEngine.SceneHandler.Instance.ReplaceScene<MainScene>();
         }
 
-        public static void PrintUsage(this MainScene self)
+        public static void Stop()
         {
-            Debugger.Info(@"使用说明：①创建演示数据；②随机角色移动；③玩家攻击演示；④清除演示数据；");
         }
     }
 }

@@ -17,6 +17,7 @@ NovaFramework的教程示例库，提供框架使用的各个模块教程示例�
 - [Dispatch Call](Runtime/Dispatch%20Call/README.md)
 - [State Transition](Runtime/State%20Transition/README.md)
 - Dependency Inject
+- [Configure Expression](Runtime/Configure%20Expression/README.md)
 - [Performance Analysis](Runtime/Performance%20Analysis/README.md)
 
 ## 注意事项

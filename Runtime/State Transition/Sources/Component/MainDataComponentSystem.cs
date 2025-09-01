@@ -1,7 +1,3 @@
-
-using System.Collections.Generic;
-
-
 /// -------------------------------------------------------------------------------
 /// Sample Module for GameEngine Framework
 ///
@@ -26,6 +22,9 @@ using System.Collections.Generic;
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
+
+using System.Collections.Generic;
+
 namespace GameSample.StateTransition
 {
     /// <summary>

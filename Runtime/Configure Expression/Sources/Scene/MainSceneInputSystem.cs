@@ -23,22 +23,19 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-namespace GameSample.StateTransition
+using System.Collections.Generic;
+
+namespace GameSample.ConfigureExpression
 {
     /// <summary>
-    /// 主场景逻辑类
+    /// 主场景输入逻辑类
     /// </summary>
-    static class MainSceneSystem
+    static class MainSceneInputSystem
     {
-        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Start)]
-        static void OnStart(this MainScene self)
+        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha1, GameEngine.InputOperationType.Released)]
+        static void OnInputOperationForCreateSoldiers(this MainScene self)
         {
             self.PrintUsage();
-        }
-
-        public static void PrintUsage(this MainScene self)
-        {
-            Debugger.Info(@"使用说明：①创建演示数据；②随机角色移动；③玩家攻击演示；④清除演示数据；");
         }
     }
 }
