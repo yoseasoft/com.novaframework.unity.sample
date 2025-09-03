@@ -1,3 +1,7 @@
+
+using UnityEngine;
+
+
 /// -------------------------------------------------------------------------------
 /// Sample Module for GameEngine Framework
 ///
@@ -23,31 +27,32 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace GameSample.ConfigureExpression
 {
     /// <summary>
-    /// 主场景输入逻辑类
+    /// 玩家对象逻辑类
     /// </summary>
-    static class MainSceneInputSystem
+    static class PlayerSystem
     {
-        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha1, GameEngine.InputOperationType.Released)]
-        static void OnInputOperationForNormalFunctionCall(this MainScene self)
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
+        static void Awake(this Player self)
         {
-            MainDataComponent mainDataComponent = self.GetComponent<MainDataComponent>();
-
-            GameEngine.GameApi.Call("震屏", "上下模式", 3, 1.5f);
-
-            GameEngine.GameApi.Call(mainDataComponent.player, "钝帧", 0.2f, 0.5f);
-
-            self.PrintUsage();
         }
 
-        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha2, GameEngine.InputOperationType.Released)]
-        static void OnInputOperationForBeanFunctionCall(this MainScene self)
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Start)]
+        static void Start(this Player self)
         {
-            self.PrintUsage();
+        }
+
+        [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.Destroy)]
+        static void Destroy(this Player self)
+        {
+        }
+
+        [GameEngine.OnApiDispatchCall("钝帧")]
+        static void BluntFrame(Player self, float duration, float rate)
+        {
+            Debugger.Info($"【{self.GetObjectName()}】钝帧效果触发：duration={duration}, rate={rate}");
         }
     }
 }

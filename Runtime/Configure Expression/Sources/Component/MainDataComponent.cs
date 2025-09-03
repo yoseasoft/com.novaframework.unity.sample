@@ -33,5 +33,8 @@ namespace GameSample.ConfigureExpression
     [GameEngine.DeclareComponentClass("MainDataComponent")]
     internal class MainDataComponent : GameEngine.CComponent
     {
+        public Player player;
+
+        public IList<Monster> monsters;
     }
 }

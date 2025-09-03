@@ -23,31 +23,17 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace GameSample.ConfigureExpression
 {
     /// <summary>
-    /// 主场景输入逻辑类
+    /// 战斗指令接口类
     /// </summary>
-    static class MainSceneInputSystem
+    static class CombatApi
     {
-        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha1, GameEngine.InputOperationType.Released)]
-        static void OnInputOperationForNormalFunctionCall(this MainScene self)
+        [GameEngine.OnApiDispatchCall("震屏")]
+        static void OnShakeScreen(string name, int time, float speed)
         {
-            MainDataComponent mainDataComponent = self.GetComponent<MainDataComponent>();
-
-            GameEngine.GameApi.Call("震屏", "上下模式", 3, 1.5f);
-
-            GameEngine.GameApi.Call(mainDataComponent.player, "钝帧", 0.2f, 0.5f);
-
-            self.PrintUsage();
-        }
-
-        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha2, GameEngine.InputOperationType.Released)]
-        static void OnInputOperationForBeanFunctionCall(this MainScene self)
-        {
-            self.PrintUsage();
+            Debugger.Info($"震屏效果触发：name={name}，time={time}, speed={speed}");
         }
     }
 }

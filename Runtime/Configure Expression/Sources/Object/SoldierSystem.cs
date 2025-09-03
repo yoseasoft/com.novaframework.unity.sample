@@ -23,31 +23,44 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace GameSample.ConfigureExpression
 {
     /// <summary>
-    /// 主场景输入逻辑类
+    /// 战斗对象逻辑类
     /// </summary>
-    static class MainSceneInputSystem
+    static class SoldierSystem
     {
-        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha1, GameEngine.InputOperationType.Released)]
-        static void OnInputOperationForNormalFunctionCall(this MainScene self)
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
+        static void Awake(this Soldier self)
         {
-            MainDataComponent mainDataComponent = self.GetComponent<MainDataComponent>();
-
-            GameEngine.GameApi.Call("震屏", "上下模式", 3, 1.5f);
-
-            GameEngine.GameApi.Call(mainDataComponent.player, "钝帧", 0.2f, 0.5f);
-
-            self.PrintUsage();
         }
 
-        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha2, GameEngine.InputOperationType.Released)]
-        static void OnInputOperationForBeanFunctionCall(this MainScene self)
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Start)]
+        static void Start(this Soldier self)
         {
-            self.PrintUsage();
+        }
+
+        [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.Destroy)]
+        static void Destroy(this Soldier self)
+        {
+        }
+
+        public static int GetObjectID(this Soldier self)
+        {
+            IdentityComponent identityComponent = self.GetComponent<IdentityComponent>();
+            return identityComponent.objectID;
+        }
+
+        public static int GetObjectType(this Soldier self)
+        {
+            IdentityComponent identityComponent = self.GetComponent<IdentityComponent>();
+            return identityComponent.objectType;
+        }
+
+        public static string GetObjectName(this Soldier self)
+        {
+            IdentityComponent identityComponent = self.GetComponent<IdentityComponent>();
+            return identityComponent.objectName;
         }
     }
 }

@@ -23,31 +23,14 @@
 /// THE SOFTWARE.
 /// -------------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace GameSample.ConfigureExpression
 {
     /// <summary>
-    /// 主场景输入逻辑类
+    /// 战斗对象基类
     /// </summary>
-    static class MainSceneInputSystem
+    [GameEngine.DeclareActorClass("Soldier")]
+    [GameEngine.EntityActivationComponent(typeof(IdentityComponent))]
+    internal class Soldier : GameEngine.CActor
     {
-        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha1, GameEngine.InputOperationType.Released)]
-        static void OnInputOperationForNormalFunctionCall(this MainScene self)
-        {
-            MainDataComponent mainDataComponent = self.GetComponent<MainDataComponent>();
-
-            GameEngine.GameApi.Call("震屏", "上下模式", 3, 1.5f);
-
-            GameEngine.GameApi.Call(mainDataComponent.player, "钝帧", 0.2f, 0.5f);
-
-            self.PrintUsage();
-        }
-
-        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha2, GameEngine.InputOperationType.Released)]
-        static void OnInputOperationForBeanFunctionCall(this MainScene self)
-        {
-            self.PrintUsage();
-        }
     }
 }
