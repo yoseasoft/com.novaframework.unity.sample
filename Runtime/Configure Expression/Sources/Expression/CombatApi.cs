@@ -35,5 +35,11 @@ namespace GameSample.ConfigureExpression
         {
             Debugger.Info($"震屏效果触发：name={name}，time={time}, speed={speed}");
         }
+
+        [GameEngine.OnApiDispatchCall("闪烁")]
+        static void OnBlinkScreen()
+        {
+            Debugger.Info($"闪烁效果触发");
+        }
     }
 }

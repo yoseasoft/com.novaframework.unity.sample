@@ -38,7 +38,7 @@ namespace GameSample.ConfigureExpression
 
         public static void PrintUsage(this MainScene self)
         {
-            Debugger.Info(@"使用说明：①测试功能调用；②测试实体功能推送；③测试配置表达式；");
+            Debugger.Info(@"使用说明：①测试功能接口调用；②测试表达式解析；③测试表达式调用；");
         }
     }
 }
