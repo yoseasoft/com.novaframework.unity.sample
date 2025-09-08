@@ -1,7 +1,3 @@
-
-using UnityEngine;
-
-
 /// -------------------------------------------------------------------------------
 /// Sample Module for GameEngine Framework
 ///
