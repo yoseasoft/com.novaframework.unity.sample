@@ -91,7 +91,7 @@ namespace GameSample.DispatchCall
             {
                 int c = self.monsters.Count;
 
-                int r = NovaEngine.Utility.Random.GetRandom(c);
+                int r = NovaEngine.Utility.Random.Next(c);
 
                 return self.monsters[r];
             }

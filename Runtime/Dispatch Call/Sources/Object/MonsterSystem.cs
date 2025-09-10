@@ -65,7 +65,7 @@ namespace GameSample.DispatchCall
             infos[3] = "徒步旅行";
             infos[4] = "骑行";
 
-            int index = NovaEngine.Utility.Random.GetRandom(infos.Length);
+            int index = NovaEngine.Utility.Random.Next(infos.Length);
             GameEngine.GameApi.OnSimulationReceiveMessageOfProtoBuf(new ActorChatResp()
             {
                 ChatList = new List<ChatInfo>()

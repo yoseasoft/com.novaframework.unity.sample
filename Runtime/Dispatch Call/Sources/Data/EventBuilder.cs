@@ -45,7 +45,7 @@ namespace GameSample.DispatchCall
         [GameEngine.OnInputDispatchCall((int) UnityEngine.KeyCode.Alpha3, GameEngine.InputOperationType.Released)]
         static void OnPlayerLockOneTargetEventSend(int keycode, int operationType)
         {
-            int r = NovaEngine.Utility.Random.GetRandom(2);
+            int r = NovaEngine.Utility.Random.Next(2);
             int uid = 0;
             if (r > 0)
             {
@@ -61,7 +61,7 @@ namespace GameSample.DispatchCall
         [GameEngine.OnInputDispatchCall((int) UnityEngine.KeyCode.Alpha4, GameEngine.InputOperationType.Released)]
         static void OnPlayerUpgradeEventSend(int keycode, int operationType)
         {
-            int exp = NovaEngine.Utility.Random.GetRandom(1000);
+            int exp = NovaEngine.Utility.Random.Next(1000);
 
             GameEngine.GameApi.Send(EventNotify.PlayerUpgrade, exp);
         }

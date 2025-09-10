@@ -49,10 +49,10 @@ namespace GameSample.DispatchCall
         static void OnLevelSpawnMessageSend(int keycode, int operationType)
         {
             List<MonsterInfo> monsters = new List<MonsterInfo>();
-            int total = NovaEngine.Utility.Random.GetRandom(3) + 1;
+            int total = NovaEngine.Utility.Random.Next(3) + 1;
             for (int n = 0; n < total; n++)
             {
-                int r = NovaEngine.Utility.Random.GetRandom(2);
+                int r = NovaEngine.Utility.Random.Next(2);
                 MonsterInfo monster = null;
                 if (r > 0)
                 {

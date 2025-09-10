@@ -38,7 +38,7 @@ namespace GameSample.StateTransition
                 return;
             }
 
-            int r = NovaEngine.Utility.Random.GetRandom(self.shout_contents.Count);
+            int r = NovaEngine.Utility.Random.Next(self.shout_contents.Count);
             string text = self.shout_contents[r];
 
             Debugger.Info("角色【{%s}】大喊：{%s}。", self.GetComponent<AttributeComponent>().name, text);

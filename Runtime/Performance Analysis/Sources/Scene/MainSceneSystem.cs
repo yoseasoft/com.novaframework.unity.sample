@@ -139,7 +139,7 @@ namespace GameSample.PerformanceAnalysis
                 return;
             }
 
-            int r = NovaEngine.Utility.Random.GetRandom(mainDataComponent.game_players.Count);
+            int r = NovaEngine.Utility.Random.Next(mainDataComponent.game_players.Count);
             Debugger.Info("正在打印输出第{%d}个实例：", r);
 
             GamePlayer gamePlayer = mainDataComponent.game_players[r];

@@ -123,7 +123,7 @@ namespace GameSample.StateTransition
                 return null;
             }
 
-            int r = NovaEngine.Utility.Random.GetRandom(2);
+            int r = NovaEngine.Utility.Random.Next(2);
             if (r > 0)
             {
                 return self.GetRandomMonster();
@@ -141,7 +141,7 @@ namespace GameSample.StateTransition
                 return null;
             }
 
-            int r = NovaEngine.Utility.Random.GetRandom(self.monsters.Count);
+            int r = NovaEngine.Utility.Random.Next(self.monsters.Count);
             return self.monsters[r];
         }
 
@@ -183,7 +183,7 @@ namespace GameSample.StateTransition
         static IList<string> GetRandomShoutList()
         {
 
-            int r = NovaEngine.Utility.Random.GetRandom(ShoutContentSize);
+            int r = NovaEngine.Utility.Random.Next(ShoutContentSize);
             return ShoutContents[r];
         }
     }

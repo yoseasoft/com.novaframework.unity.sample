@@ -99,7 +99,7 @@ namespace GameSample.DependencyInject
                 @"bow_monster",
             };
 
-            int r = NovaEngine.Utility.Random.GetRandom(beanNames.Count);
+            int r = NovaEngine.Utility.Random.Next(beanNames.Count);
             string beanName = beanNames[r];
 
             mainDataComponent.targetObject = GameEngine.ApplicationContext.CreateBean(beanName) as GameEngine.CActor;

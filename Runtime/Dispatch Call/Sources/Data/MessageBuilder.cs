@@ -72,8 +72,8 @@ namespace GameSample.DispatchCall
         {
             int uid = UniqueGenerator.NextId();
 
-            float ox = (NovaEngine.Utility.Random.GetRandom(1000) + 1) * 0.1f;
-            float oz = (NovaEngine.Utility.Random.GetRandom(1000) + 1) * 0.1f;
+            float ox = (NovaEngine.Utility.Random.Next(1000) + 1) * 0.1f;
+            float oz = (NovaEngine.Utility.Random.Next(1000) + 1) * 0.1f;
 
             return new MonsterInfo()
             {
@@ -110,8 +110,8 @@ namespace GameSample.DispatchCall
         {
             int uid = UniqueGenerator.NextId();
 
-            float ox = (NovaEngine.Utility.Random.GetRandom(1000) + 1) * 0.1f;
-            float oz = (NovaEngine.Utility.Random.GetRandom(1000) + 1) * 0.1f;
+            float ox = (NovaEngine.Utility.Random.Next(1000) + 1) * 0.1f;
+            float oz = (NovaEngine.Utility.Random.Next(1000) + 1) * 0.1f;
 
             return new MonsterInfo()
             {
