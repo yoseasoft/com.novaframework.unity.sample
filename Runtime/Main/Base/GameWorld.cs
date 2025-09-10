@@ -39,7 +39,7 @@ namespace GameSample
             LoadAllAssemblies();
 
             // 启动应用通知回调接口
-            GameEngine.EngineDispatcher.OnApplicationStartup(OnApplicationResponseCallback);
+            GameEngine.GameLibrary.OnApplicationStartup(OnApplicationResponseCallback);
 
             CallSampleGate(GameEngine.GameMacros.GAME_REMOTE_PROCESS_CALL_RUN_SERVICE_NAME);
         }
@@ -49,7 +49,7 @@ namespace GameSample
             CallSampleGate(GameEngine.GameMacros.GAME_REMOTE_PROCESS_CALL_STOP_SERVICE_NAME);
 
             // 关闭应用通知回调接口
-            GameEngine.EngineDispatcher.OnApplicationShutdown(OnApplicationResponseCallback);
+            GameEngine.GameLibrary.OnApplicationShutdown(OnApplicationResponseCallback);
 
             SampleFiltingProcessor.RemoveSampleFilter();
         }
