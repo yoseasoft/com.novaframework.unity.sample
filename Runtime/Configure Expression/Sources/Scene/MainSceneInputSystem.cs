@@ -37,9 +37,9 @@ namespace GameSample.ConfigureExpression
         {
             MainDataComponent mainDataComponent = self.GetComponent<MainDataComponent>();
 
-            GameEngine.GameApi.CallAction(null, "震屏", "上下模式", 3, 1.5f);
+            GameEngine.GameApi.CallFunction(null, "震屏", "上下模式", 3, 1.5f);
 
-            GameEngine.GameApi.CallAction(mainDataComponent.player, "钝帧", 0.2f, 0.5f);
+            GameEngine.GameApi.CallFunction(mainDataComponent.player, "钝帧", 0.2f, 0.5f);
 
             self.PrintUsage();
         }
