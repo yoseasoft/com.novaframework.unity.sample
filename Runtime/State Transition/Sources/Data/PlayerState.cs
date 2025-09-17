@@ -115,7 +115,7 @@ namespace GameSample.StateTransition
             Debugger.Info("离开空中状态");
         }
 
-        protected override void OnUpdate(float deltaTime) { Debugger.Info("刷新空中状态"); }
+        protected override void OnUpdate() { Debugger.Info("刷新空中状态"); }
     }
 
     // <summary>
@@ -175,7 +175,7 @@ namespace GameSample.StateTransition
             Debugger.Info("离开移动状态" + ctx.position.x);
         }
 
-        protected override void OnUpdate(float deltaTime)
+        protected override void OnUpdate()
         {
             float target = ctx.move.x * 1f;
             ctx.position.x += target;

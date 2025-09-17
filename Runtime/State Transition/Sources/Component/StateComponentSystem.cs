@@ -55,7 +55,7 @@ namespace GameSample.StateTransition
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Update)]
         static void Update(this StateComponent self)
         {
-            self.machine.Tick(NovaEngine.Timestamp.DeltaTime);
+            self.machine.Tick();
 
             string path = StatePath(self.machine.Root.Leaf());
             if (self.lastPath != path)
@@ -68,6 +68,7 @@ namespace GameSample.StateTransition
         [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.Destroy)]
         static void Destroy(this StateComponent self)
         {
+            self.machine.Stop();
         }
 
         static string StatePath(GameEngine.HFSM.State s)
