@@ -33,6 +33,8 @@ namespace GameSample.StateTransition
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Awake)]
         static void Awake(this Player self)
         {
+            self.context = new PlayerContext();
+
             self.CreateStateBuilder()
                 .Start("Attack").Transition("Idle");
         }
@@ -40,6 +42,24 @@ namespace GameSample.StateTransition
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Start)]
         static void Start(this Player self)
         {
+        }
+
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Update)]
+        static void Update(this Player self)
+        {
+            PlayerContext ctx = self.context;
+
+            if (!ctx.grounded)
+            {
+                ctx.jumpCount -= 1;
+                Debugger.Info("jump count " + ctx.jumpCount);
+                if (ctx.jumpCount <= 0)
+                {
+                    ctx.jumpCount = 0;
+                    ctx.jumpPressed = false;
+                    ctx.grounded = true;
+                }
+            }
         }
 
         [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.Destroy)]

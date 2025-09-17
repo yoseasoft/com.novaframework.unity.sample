@@ -26,13 +26,15 @@
 namespace GameSample.StateTransition
 {
     /// <summary>
-    /// 玩家对象基类
+    /// 玩家对象的上下文信息类
     /// </summary>
-    [GameEngine.DeclareActorClass("Player")]
-    [GameEngine.EntityActivationComponent(typeof(AttackComponent))]
-    [GameEngine.EntityActivationComponent(typeof(StateComponent))]
-    internal class Player : Soldier
+    [System.Serializable]
+    internal class PlayerContext
     {
-        public PlayerContext context;
+        public UnityEngine.Vector3 move;
+        public UnityEngine.Vector3 position;
+        public bool grounded;
+        public bool jumpPressed;
+        public int jumpCount;
     }
 }

@@ -80,13 +80,50 @@ namespace GameSample.StateTransition
         [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Alpha4, GameEngine.InputOperationType.Released)]
         static void OnInputOperationForRemoveSoldiers(this MainScene self)
         {
-            Debugger.Warn("当前对象数据不完整，请重新构建完整数据后执行该操作！");
             MainDataComponent mainDataComponent = self.GetComponent<MainDataComponent>();
             mainDataComponent.RemovePlayer();
             mainDataComponent.RemoveAllMonsters();
             Debugger.Info("销毁角色对象实例完成！");
 
             self.PrintUsage();
+        }
+
+        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.LeftArrow, GameEngine.InputOperationType.Pressed)]
+        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.RightArrow, GameEngine.InputOperationType.Pressed)]
+        static void OnInputOperationForPlayerMove(this MainScene self, int keycode, int operationType)
+        {
+            MainDataComponent mainDataComponent = self.GetComponent<MainDataComponent>();
+            Player player = mainDataComponent.player;
+
+            if ((int) UnityEngine.KeyCode.LeftArrow == keycode)
+            {
+                player.context.move.x = -1f;
+            }
+            else if ((int) UnityEngine.KeyCode.RightArrow == keycode)
+            {
+                player.context.move.x = 1f;
+            }
+        }
+
+        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.LeftArrow, GameEngine.InputOperationType.Released)]
+        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.RightArrow, GameEngine.InputOperationType.Released)]
+        static void OnInputOperationForPlayerMoveStop(this MainScene self, int keycode, int operationType)
+        {
+            MainDataComponent mainDataComponent = self.GetComponent<MainDataComponent>();
+            Player player = mainDataComponent.player;
+
+            player.context.move.x = 0f;
+        }
+
+        [GameEngine.InputResponseBindingOfTarget((int) UnityEngine.KeyCode.Space, GameEngine.InputOperationType.Pressed)]
+        static void OnInputOperationForPlayerJump(this MainScene self, int keycode, int operationType)
+        {
+            MainDataComponent mainDataComponent = self.GetComponent<MainDataComponent>();
+            Player player = mainDataComponent.player;
+
+            player.context.jumpPressed = true;
+            player.context.jumpCount = 5;
+            player.context.grounded = false;
         }
     }
 }

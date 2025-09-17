@@ -26,13 +26,15 @@
 namespace GameSample.StateTransition
 {
     /// <summary>
-    /// 玩家对象基类
+    /// 状态组件类
     /// </summary>
-    [GameEngine.DeclareActorClass("Player")]
-    [GameEngine.EntityActivationComponent(typeof(AttackComponent))]
-    [GameEngine.EntityActivationComponent(typeof(StateComponent))]
-    internal class Player : Soldier
+    [GameEngine.DeclareComponentClass("StateComponent")]
+    internal class StateComponent : GameEngine.CComponent
     {
-        public PlayerContext context;
+        public GameEngine.HFSM.StateMachine machine;
+
+        public GameEngine.HFSM.State root;
+
+        public string lastPath;
     }
 }
