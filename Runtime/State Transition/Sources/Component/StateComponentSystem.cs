@@ -41,8 +41,7 @@ namespace GameSample.StateTransition
             PlayerContext ctx = player.context;
 
             self.root = new PlayerRoot(null, ctx);
-            GameEngine.HFSM.StateMachineBuilder builder = new GameEngine.HFSM.StateMachineBuilder(self.root);
-            self.machine = builder.Build();
+            self.machine = GameEngine.HFSM.StateMachineBuilder.Build(self.root);
 
             self.machine.Start();
         }
