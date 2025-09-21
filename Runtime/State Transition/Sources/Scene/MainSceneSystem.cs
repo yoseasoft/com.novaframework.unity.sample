@@ -38,7 +38,7 @@ namespace GameSample.StateTransition
 
         public static void PrintUsage(this MainScene self)
         {
-            Debugger.Info(@"使用说明：①创建演示数据；②随机角色移动；③玩家攻击演示；④清除演示数据；");
+            Debugger.Info(@"使用说明：①创建演示数据；②角色向左移动；③角色向右移动；④角色悬空处理；⑤清除演示数据；");
         }
     }
 }

@@ -34,7 +34,5 @@ namespace GameSample.StateTransition
     internal class MainDataComponent : GameEngine.CComponent
     {
         public Player player;
-
-        public IList<Monster> monsters;
     }
 }

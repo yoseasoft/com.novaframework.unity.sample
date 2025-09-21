@@ -29,7 +29,6 @@ namespace GameSample.StateTransition
     /// 玩家对象基类
     /// </summary>
     [GameEngine.DeclareActorClass("Player")]
-    [GameEngine.EntityActivationComponent(typeof(AttackComponent))]
     [GameEngine.EntityActivationComponent(typeof(StateComponent))]
     internal class Player : Soldier
     {

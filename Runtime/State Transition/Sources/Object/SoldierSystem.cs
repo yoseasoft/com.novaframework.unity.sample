@@ -46,37 +46,5 @@ namespace GameSample.StateTransition
         static void Destroy(this Soldier self)
         {
         }
-
-        [GameEngine.StateTransitionBindingOfTarget("Move", GameEngine.StateAccessType.Enter)]
-        static void OnMoveBegan(this Soldier self)
-        {
-            Debugger.Info("【{%s}】开始移动！", self.GetComponent<AttributeComponent>().name);
-
-            MoveComponent moveComponent = self.GetComponent<MoveComponent>();
-            moveComponent.MoveTo();
-        }
-
-        [GameEngine.StateTransitionBindingOfTarget("Move", GameEngine.StateAccessType.Update)]
-        static void OnMoveUpdate(this Soldier self)
-        {
-            MoveComponent moveComponent = self.GetComponent<MoveComponent>();
-            if (moveComponent.is_moving)
-                return;
-
-            self.StateFinished();
-        }
-
-        [GameEngine.StateTransitionBindingOfTarget("Move", GameEngine.StateAccessType.Update)]
-        static void OnMoveUpdateAndNotify(this Soldier self)
-        {
-            MoveComponent moveComponent = self.GetComponent<MoveComponent>();
-            Debugger.Info("【{%s}】当前移动距离！", self.GetComponent<AttributeComponent>().name, moveComponent.move_length);
-        }
-
-        [GameEngine.StateTransitionBindingOfTarget("Move", GameEngine.StateAccessType.Exit)]
-        static void OnMoveEnded(this Soldier self)
-        {
-            Debugger.Info("【{%s}】移动结束！", self.GetComponent<AttributeComponent>().name);
-        }
     }
 }

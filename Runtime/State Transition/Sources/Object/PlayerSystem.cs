@@ -34,9 +34,6 @@ namespace GameSample.StateTransition
         static void Awake(this Player self)
         {
             self.context = new PlayerContext();
-
-            self.CreateStateBuilder()
-                .Start("Attack").Transition("Idle");
         }
 
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Start)]
@@ -65,54 +62,6 @@ namespace GameSample.StateTransition
         [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.Destroy)]
         static void Destroy(this Player self)
         {
-        }
-
-        [GameEngine.StateTransitionBindingOfTarget("Attack", GameEngine.StateAccessType.Enter)]
-        static void OnAttackBegan(this Player self)
-        {
-            Debugger.Info("【{%s}】开始攻击！", self.GetComponent<AttributeComponent>().name);
-
-            MainDataComponent mainDataComponent = GameEngine.GameApi.GetCurrentScene().GetComponent<MainDataComponent>();
-            Monster target = mainDataComponent.GetRandomMonster();
-
-            AttackComponent attackComponent = self.GetComponent<AttackComponent>();
-            attackComponent.AttackTo(target);
-        }
-
-        [GameEngine.StateTransitionBindingOfTarget("Attack", GameEngine.StateAccessType.Update)]
-        static void OnAttackUpdate(this Player self, GameEngine.StateGraph stateGraph)
-        {
-            AttackComponent attackComponent = self.GetComponent<AttackComponent>();
-            if (attackComponent.is_attacking)
-                return;
-
-            Debugger.Info("【{%s}】当前状态完成：{%s}！", self.GetComponent<AttributeComponent>().name, stateGraph.CurrentState);
-            self.StateFinished();
-        }
-
-        [GameEngine.StateTransitionBindingOfTarget("Attack", GameEngine.StateAccessType.Update)]
-        static void OnAttackUpdateAndNotify(this Player self)
-        {
-            AttackComponent attackComponent = self.GetComponent<AttackComponent>();
-            Debugger.Info("【{%s}】当前耗时：{%f}！", self.GetComponent<AttributeComponent>().name, NovaEngine.Timestamp.RealtimeSinceStartup - attackComponent.last_attack_time);
-        }
-
-        [GameEngine.StateTransitionBindingOfTarget("Attack", GameEngine.StateAccessType.Exit)]
-        static void OnAttackEnded(this Player self)
-        {
-            Debugger.Info("【{%s}】攻击结束！", self.GetComponent<AttributeComponent>().name);
-        }
-
-        [GameEngine.StateTransitionBindingOfTarget("Idle", GameEngine.StateAccessType.Enter)]
-        static void OnIdleBegan(this Player self)
-        {
-            Debugger.Info("【{%s}】进入休闲！", self.GetComponent<AttributeComponent>().name);
-        }
-
-        [GameEngine.StateTransitionBindingOfTarget("Idle", GameEngine.StateAccessType.Exit)]
-        static void OnIdleEnded(this Player self)
-        {
-            Debugger.Info("【{%s}】休闲结束！", self.GetComponent<AttributeComponent>().name);
         }
     }
 }
