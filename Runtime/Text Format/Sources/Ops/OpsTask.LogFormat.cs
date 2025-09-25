@@ -45,7 +45,7 @@ namespace GameSample.TextFormat
             dict.Add(4, "room");
             dict.Add(5, "zoon");
 
-            string format = @"测试格式化参数，包括了整型{%d}，八进制{%o}，十六进制{%x}，浮点型{%f}，科学计数法{%e}，字符型{%c}，字符串型""{%s}""，指针型""{%p}""，对象类型{%t}，对象描述{{{%v}}}";
+            string format = @"测试格式化参数，包括了整型{%d}，八进制{%o}，十六进制{%x}，浮点型{%f}，科学计数法{%e}，字符型{%c}，字符串型""{%s}""，指针型""{%p}""，对象类型{%t}，对象描述{{{%i}}}";
             Debugger.Warn(NovaEngine.Formatter.TextFormatConvertionProcess(format, num, num, num, num2, num2, str, str, dict, dict, dict, num, num2, str, dict));
         }
     }

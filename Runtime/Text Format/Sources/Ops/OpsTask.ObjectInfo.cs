@@ -36,7 +36,7 @@ namespace GameSample.TextFormat
             MainDataComponent mainDataComponent = GameEngine.GameApi.GetCurrentScene().GetComponent<MainDataComponent>();
             Player player = mainDataComponent.player;
 
-            Debugger.Warn(NovaEngine.Formatter.TextFormatConvertionProcess("{%v}", player));
+            Debugger.Warn(NovaEngine.Formatter.TextFormatConvertionProcess("{%i}", player));
         }
     }
 }
