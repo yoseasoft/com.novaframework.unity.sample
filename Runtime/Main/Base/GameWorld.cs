@@ -54,9 +54,22 @@ namespace GameSample
             SampleFiltingProcessor.RemoveSampleFilter();
         }
 
-        public static void Reload()
+        /// <summary>
+        /// 世界容器的重载运行函数
+        /// </summary>
+        /// <param name="type">类型标识</param>
+        public static void Reload(int type)
         {
-            LoadAllAssemblies(true);
+            switch (type)
+            {
+                case (int) GameEngine.EngineCommandType.Hotfix:
+                    // 重载业务对象类
+                    LoadAllAssemblies(true);
+                    break;
+                default:
+                    Debugger.Throw<System.InvalidOperationException>($"Invalid reload type {type}.");
+                    break;
+            }
         }
 
         /// <summary>

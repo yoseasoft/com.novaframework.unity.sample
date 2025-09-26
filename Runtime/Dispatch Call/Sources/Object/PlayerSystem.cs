@@ -50,7 +50,7 @@ namespace GameSample.DispatchCall
         [GameEngine.EventSubscribeBindingOfTarget(EventNotify.PlayerDisplayInfo)]
         private static void OnPlayerDisplayInfo(this Player self, int eventID, params object[] args)
         {
-            Debugger.Info("玩家对象成功接收事件[{%d}]，事件参数：{%s}，信息输出：{%s}！", eventID, NovaEngine.Formatter.ToString(args), self.ToPlayerString());
+            Debugger.Info("玩家对象成功接收事件[{%d}]，事件参数：{%s}，信息输出：{%s}！", eventID, NovaEngine.FormatString.Format(args), self.ToPlayerString());
         }
 
         [GameEngine.EventSubscribeBindingOfTarget(EventNotify.PlayerLockOneTarget)]
