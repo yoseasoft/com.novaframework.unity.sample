@@ -55,7 +55,8 @@ namespace GameSample.DispatchCall
 
         public override string ToString()
         {
-            return $"Level={level},Exp={exp},Health={health},Energy={energy},Attack={attack}";
+            IdentityComponent identityComponent = this.GetComponent<IdentityComponent>();
+            return $"Id={identityComponent?.objectID},Name={identityComponent?.objectName},Level={level},Exp={exp},Health={health},Energy={energy},Attack={attack}";
         }
     }
 }

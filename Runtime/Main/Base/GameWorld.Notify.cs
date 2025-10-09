@@ -38,18 +38,6 @@ namespace GameSample
         {
         }
 
-        public static void FixedUpdate()
-        {
-        }
-
-        public static void Update()
-        {
-        }
-
-        public static void LateUpdate()
-        {
-        }
-
         public static void FixedExecute()
         {
         }
@@ -59,6 +47,18 @@ namespace GameSample
         }
 
         public static void LateExecute()
+        {
+        }
+
+        public static void FixedUpdate()
+        {
+        }
+
+        public static void Update()
+        {
+        }
+
+        public static void LateUpdate()
         {
         }
     }

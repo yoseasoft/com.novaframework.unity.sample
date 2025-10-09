@@ -106,15 +106,6 @@ namespace GameSample
                 case NovaEngine.Application.ProtocolType.Shutdown:
                     Shutdown();
                     break;
-                case NovaEngine.Application.ProtocolType.FixedUpdate:
-                    FixedUpdate();
-                    break;
-                case NovaEngine.Application.ProtocolType.Update:
-                    Update();
-                    break;
-                case NovaEngine.Application.ProtocolType.LateUpdate:
-                    LateUpdate();
-                    break;
                 case NovaEngine.Application.ProtocolType.FixedExecute:
                     FixedExecute();
                     break;
@@ -123,6 +114,15 @@ namespace GameSample
                     break;
                 case NovaEngine.Application.ProtocolType.LateExecute:
                     LateExecute();
+                    break;
+                case NovaEngine.Application.ProtocolType.FixedUpdate:
+                    FixedUpdate();
+                    break;
+                case NovaEngine.Application.ProtocolType.Update:
+                    Update();
+                    break;
+                case NovaEngine.Application.ProtocolType.LateUpdate:
+                    LateUpdate();
                     break;
                 default:
                     break;
