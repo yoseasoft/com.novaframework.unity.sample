@@ -80,28 +80,52 @@ namespace GameSample.ObjectLifecycle
             GameEngine.Debugger.Info("目标玩家实例{%t}后置启动完成！", self);
         }
 
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Execute)]
+        static void BeforeExecute(this Player self)
+        {
+            /*if (GameWorld.OnceTimeUpdateCallPassed(self))*/ GameEngine.Debugger.Info("目标玩家实例{%t}前置执行完成！", self);
+        }
+
+        [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.Execute)]
+        static void AfterExecute(this Player self)
+        {
+            /*if (GameWorld.OnceTimeUpdateCallPassed(self))*/ GameEngine.Debugger.Info("目标玩家实例{%t}后置执行完成！", self);
+        }
+
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Update)]
         static void BeforeUpdate(this Player self)
         {
-            if (GameWorld.OnceTimeUpdateCallPassed(self)) GameEngine.Debugger.Info("目标玩家实例{%t}前置刷新完成！", self);
+            /*if (GameWorld.OnceTimeUpdateCallPassed(self))*/ GameEngine.Debugger.Info("目标玩家实例{%t}前置刷新完成！", self);
         }
 
         [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.Update)]
         static void AfterUpdate(this Player self)
         {
-            if (GameWorld.OnceTimeUpdateCallPassed(self)) GameEngine.Debugger.Info("目标玩家实例{%t}后置刷新完成！", self);
+            /*if (GameWorld.OnceTimeUpdateCallPassed(self))*/ GameEngine.Debugger.Info("目标玩家实例{%t}后置刷新完成！", self);
+        }
+
+        [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.LateExecute)]
+        static void BeforeLateExecute(this Player self)
+        {
+            /*if (GameWorld.OnceTimeUpdateCallPassed(self))*/ GameEngine.Debugger.Info("目标玩家实例{%t}前置延迟执行完成！", self);
+        }
+
+        [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.LateExecute)]
+        static void AfterLateExecute(this Player self)
+        {
+            /*if (GameWorld.OnceTimeUpdateCallPassed(self))*/ GameEngine.Debugger.Info("目标玩家实例{%t}后置延迟执行完成！", self);
         }
 
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.LateUpdate)]
         static void BeforeLateUpdate(this Player self)
         {
-            if (GameWorld.OnceTimeUpdateCallPassed(self)) GameEngine.Debugger.Info("目标玩家实例{%t}前置延迟刷新完成！", self);
+            /*if (GameWorld.OnceTimeUpdateCallPassed(self))*/ GameEngine.Debugger.Info("目标玩家实例{%t}前置延迟刷新完成！", self);
         }
 
         [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.LateUpdate)]
         static void AfterLateUpdate(this Player self)
         {
-            if (GameWorld.OnceTimeUpdateCallPassed(self)) GameEngine.Debugger.Info("目标玩家实例{%t}后置延迟刷新完成！", self);
+            /*if (GameWorld.OnceTimeUpdateCallPassed(self))*/ GameEngine.Debugger.Info("目标玩家实例{%t}后置延迟刷新完成！", self);
         }
 
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Destroy)]
