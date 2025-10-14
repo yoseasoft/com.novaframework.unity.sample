@@ -148,6 +148,26 @@ namespace GameSample.DynamicInvokeGenerator
             }
         }
 
+        public static void TestMemberFunctionBuild()
+        {
+            Debugger.Info("_________________________________________________");
+
+            Type targetType = typeof(Hashiqi);
+
+            Hashiqi obj = new Hashiqi();
+            Alasijia obj2 = new Alasijia();
+
+            MethodInfo m1 = targetType.GetMethod("SayHello", BindingFlags.Public | BindingFlags.Instance);
+            //MethodInfo m2 = targetType.GetMethod("SayGoodbye", BindingFlags.Public | BindingFlags.Instance);
+
+            Delegate d1 = NovaEngine.Utility.Reflection.CreateGenericActionDelegate(null, m1);
+            //Delegate d2 = NovaEngine.Utility.Reflection.CreateGenericActionDelegate(null, m2);
+            //Delegate d3 = Delegate.Combine(d1, d2);
+            //Delegate myDelegate = Delegate.CreateDelegate(typeof(Action<Animal>), null, m1);
+
+            d1.DynamicInvoke(obj, obj2);
+        }
+
         public static void Run()
         {
             Debugger.Info("_________________________________________________");
