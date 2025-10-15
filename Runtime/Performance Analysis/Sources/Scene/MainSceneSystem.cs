@@ -104,10 +104,10 @@ namespace GameSample.PerformanceAnalysis
                 GamePlayer player = mainDataComponent.game_players[n];
                 for (int u = 0; u < c; ++u)
                 {
-                    //player.Call(player.Update);
-                    //player.Call(player.LateUpdate);
-                    player.Call("Update");
-                    player.Call("LateUpdate");
+                    player.Call(player.Update, GameEngine.AspectBehaviourType.Update);
+                    player.Call(player.LateUpdate, GameEngine.AspectBehaviourType.LateUpdate);
+                    //player.Call("Update");
+                    //player.Call("LateUpdate");
                 }
             }
             stopwatch.Stop();
