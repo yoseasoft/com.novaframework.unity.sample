@@ -29,7 +29,7 @@ namespace GameSample.SymbolParser
     /// 玩家对象基类
     /// </summary>
     [GameEngine.CActorClass("Player")]
-    [GameEngine.EntityActivationComponent(typeof(AttackComponent))]
+    [GameEngine.CEntityAutomaticActivationComponent(typeof(AttackComponent))]
     internal class Player : Soldier, IEquip
     {
         public void OnEquip(int itemID)

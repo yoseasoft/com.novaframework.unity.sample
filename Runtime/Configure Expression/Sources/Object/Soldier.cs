@@ -29,7 +29,7 @@ namespace GameSample.ConfigureExpression
     /// 战斗对象基类
     /// </summary>
     [GameEngine.CActorClass("Soldier")]
-    [GameEngine.EntityActivationComponent(typeof(IdentityComponent))]
+    [GameEngine.CEntityAutomaticActivationComponent(typeof(IdentityComponent))]
     internal class Soldier : GameEngine.CActor
     {
     }

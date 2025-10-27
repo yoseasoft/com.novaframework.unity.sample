@@ -29,7 +29,7 @@ namespace GameSample.ConfigureExpression
     /// 主场景类
     /// </summary>
     [GameEngine.CSceneClass("Main")]
-    [GameEngine.EntityActivationComponent(typeof(MainDataComponent))]
+    [GameEngine.CEntityAutomaticActivationComponent(typeof(MainDataComponent))]
     internal class MainScene : GameEngine.CScene
     {
     }

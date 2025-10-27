@@ -29,7 +29,7 @@ namespace GameSample.PerformanceAnalysis
     /// 通过框架Proto实现的角色对象类
     /// </summary>
     [GameEngine.CActorClass("GameActor")]
-    [GameEngine.EntityActivationComponent(typeof(GameAttributeComponent))]
+    [GameEngine.CEntityAutomaticActivationComponent(typeof(GameAttributeComponent))]
     internal abstract class GameActor : GameEngine.CActor
     {
         public int actor_count;

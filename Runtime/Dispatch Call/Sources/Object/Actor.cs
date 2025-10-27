@@ -29,8 +29,8 @@ namespace GameSample.DispatchCall
     /// 角色对象基类
     /// </summary>
     [GameEngine.CActorClass("Actor")]
-    [GameEngine.EntityActivationComponent(typeof(IdentityComponent))]
-    [GameEngine.EntityActivationComponent(typeof(AttributeComponent))]
+    [GameEngine.CEntityAutomaticActivationComponent(typeof(IdentityComponent))]
+    [GameEngine.CEntityAutomaticActivationComponent(typeof(AttributeComponent))]
     internal abstract class Actor : GameEngine.CActor
     {
     }

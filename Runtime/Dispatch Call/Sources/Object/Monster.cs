@@ -29,7 +29,7 @@ namespace GameSample.DispatchCall
     /// 怪物对象基类
     /// </summary>
     [GameEngine.CActorClass("Monster")]
-    [GameEngine.EntityActivationComponent(typeof(SpawnComponent))]
+    [GameEngine.CEntityAutomaticActivationComponent(typeof(SpawnComponent))]
     internal class Monster : Soldier
     {
     }

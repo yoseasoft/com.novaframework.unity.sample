@@ -29,7 +29,7 @@ namespace GameSample.StateTransition
     /// 玩家对象基类
     /// </summary>
     [GameEngine.CActorClass("Player")]
-    [GameEngine.EntityActivationComponent(typeof(StateComponent))]
+    [GameEngine.CEntityAutomaticActivationComponent(typeof(StateComponent))]
     internal class Player : Soldier
     {
         public PlayerContext context;

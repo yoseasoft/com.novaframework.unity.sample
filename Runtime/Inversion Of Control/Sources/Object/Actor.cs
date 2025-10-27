@@ -29,7 +29,7 @@ namespace GameSample.InversionOfControl
     /// 角色对象基类
     /// </summary>
     [GameEngine.CActorClass("Actor")]
-    [GameEngine.EntityActivationComponent(typeof(AttributeComponent))]
+    [GameEngine.CEntityAutomaticActivationComponent(typeof(AttributeComponent))]
     internal abstract class Actor : GameEngine.CActor
     {
         protected override void OnInitialize()

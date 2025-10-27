@@ -29,7 +29,7 @@ namespace GameSample.DependencyInject
     /// 角色对象基类
     /// </summary>
     [GameEngine.CActorClass("Actor")]
-    [GameEngine.EntityActivationComponent(typeof(IdentityComponent))]
+    [GameEngine.CEntityAutomaticActivationComponent(typeof(IdentityComponent))]
     internal abstract class Actor : GameEngine.CActor
     {
     }
