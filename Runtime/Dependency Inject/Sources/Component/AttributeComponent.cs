@@ -28,7 +28,7 @@ namespace GameSample.DependencyInject
     /// <summary>
     /// 属性组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("AttributeComponent")]
+    [GameEngine.CComponentClass("AttributeComponent")]
     internal class AttributeComponent : GameEngine.CComponent
     {
         public int health;

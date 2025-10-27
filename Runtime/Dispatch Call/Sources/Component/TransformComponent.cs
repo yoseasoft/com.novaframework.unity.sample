@@ -28,7 +28,7 @@ namespace GameSample.DispatchCall
     /// <summary>
     /// 变换组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("TransformComponent")]
+    [GameEngine.CComponentClass("TransformComponent")]
     internal class TransformComponent : GameEngine.CComponent
     {
         public UnityEngine.Vector3 position;

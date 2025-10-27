@@ -28,7 +28,7 @@ namespace GameSample.DependencyInject
     /// <summary>
     /// Buff对象基类
     /// </summary>
-    [GameEngine.DeclareObjectClass("Buff")]
+    [GameEngine.CObjectClass("Buff")]
     internal class Buff : GameEngine.CObject
     {
     }

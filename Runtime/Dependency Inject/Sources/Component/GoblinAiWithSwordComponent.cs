@@ -28,7 +28,7 @@ namespace GameSample.DependencyInject
     /// <summary>
     /// 长剑哥布林的AI组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("GoblinAiWithSwordComponent")]
+    [GameEngine.CComponentClass("GoblinAiWithSwordComponent")]
     internal class GoblinAiWithSwordComponent : GameEngine.CComponent
     {
     }

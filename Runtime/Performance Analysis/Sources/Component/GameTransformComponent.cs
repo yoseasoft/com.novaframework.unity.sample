@@ -28,7 +28,7 @@ namespace GameSample.PerformanceAnalysis
     /// <summary>
     /// 通过框架Proto实现的变换组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("GameTransformComponent")]
+    [GameEngine.CComponentClass("GameTransformComponent")]
     internal class GameTransformComponent : GameEngine.CComponent
     {
         public UnityEngine.Vector3 position;

@@ -28,7 +28,7 @@ namespace GameSample.ObjectLifecycle
     /// <summary>
     /// 跳斩组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("LeapAttackComponent")]
+    [GameEngine.CComponentClass("LeapAttackComponent")]
     internal class LeapAttackComponent : AttackComponent
     {
     }

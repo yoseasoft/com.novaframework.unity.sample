@@ -28,7 +28,7 @@ namespace GameSample.DispatchCall
     /// <summary>
     /// 身份组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("IdentityComponent")]
+    [GameEngine.CComponentClass("IdentityComponent")]
     internal class IdentityComponent : GameEngine.CComponent
     {
         public int objectID;

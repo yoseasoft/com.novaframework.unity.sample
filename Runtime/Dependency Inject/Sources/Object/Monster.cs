@@ -28,7 +28,7 @@ namespace GameSample.DependencyInject
     /// <summary>
     /// 怪物对象基类
     /// </summary>
-    [GameEngine.DeclareActorClass("Monster")]
+    [GameEngine.CActorClass("Monster")]
     internal class Monster : Soldier
     {
     }

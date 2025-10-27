@@ -28,7 +28,7 @@ namespace GameSample.DispatchCall
     /// <summary>
     /// 孵化组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("SpawnComponent")]
+    [GameEngine.CComponentClass("SpawnComponent")]
     internal class SpawnComponent : GameEngine.CComponent
     {
         public UnityEngine.Vector3 born_position;

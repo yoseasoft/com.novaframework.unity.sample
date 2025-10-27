@@ -28,7 +28,7 @@ namespace GameSample.PerformanceAnalysis
     /// <summary>
     /// 通过框架Proto实现的属性组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("GameAttributeComponent")]
+    [GameEngine.CComponentClass("GameAttributeComponent")]
     internal class GameAttributeComponent : GameEngine.CComponent
     {
         public int level;

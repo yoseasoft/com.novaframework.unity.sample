@@ -28,7 +28,7 @@ namespace GameSample.DependencyInject
     /// <summary>
     /// 攻击组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("AttackComponent")]
+    [GameEngine.CComponentClass("AttackComponent")]
     internal class AttackComponent : GameEngine.CComponent
     {
         public Weapon weapon;

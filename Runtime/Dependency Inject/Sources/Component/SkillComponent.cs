@@ -30,7 +30,7 @@ namespace GameSample.DependencyInject
     /// <summary>
     /// 技能组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("SkillComponent")]
+    [GameEngine.CComponentClass("SkillComponent")]
     internal class SkillComponent : GameEngine.CComponent
     {
         public class SkillInfo

@@ -28,7 +28,7 @@ namespace GameSample.DependencyInject
     /// <summary>
     /// 战斗对象基类
     /// </summary>
-    [GameEngine.DeclareActorClass("Soldier")]
+    [GameEngine.CActorClass("Soldier")]
     [GameEngine.EntityActivationComponent(typeof(AttributeComponent))]
     [GameEngine.EntityActivationComponent(typeof(TransformComponent))]
     [GameEngine.EntityActivationComponent(typeof(MoveComponent))]

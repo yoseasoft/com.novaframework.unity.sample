@@ -28,7 +28,7 @@ namespace GameSample.PerformanceAnalysis
     /// <summary>
     /// 通过框架Proto实现的玩家对象类
     /// </summary>
-    [GameEngine.DeclareActorClass("GamePlayer")]
+    [GameEngine.CActorClass("GamePlayer")]
     [GameEngine.EntityActivationComponent(typeof(GameTransformComponent))]
     internal class GamePlayer : GameActor
     {

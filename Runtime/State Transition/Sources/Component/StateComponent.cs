@@ -28,7 +28,7 @@ namespace GameSample.StateTransition
     /// <summary>
     /// 状态组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("StateComponent")]
+    [GameEngine.CComponentClass("StateComponent")]
     internal class StateComponent : GameEngine.CComponent
     {
         public GameEngine.HFSM.StateMachine machine;

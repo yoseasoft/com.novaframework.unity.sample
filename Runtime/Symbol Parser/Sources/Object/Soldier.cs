@@ -28,7 +28,7 @@ namespace GameSample.SymbolParser
     /// <summary>
     /// 战斗对象基类
     /// </summary>
-    [GameEngine.DeclareActorClass("Soldier")]
+    [GameEngine.CActorClass("Soldier")]
     [GameEngine.EntityActivationComponent(typeof(MoveComponent))]
     internal class Soldier : Actor, IState
     {

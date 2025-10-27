@@ -28,7 +28,7 @@ namespace GameSample.DispatchCall
     /// <summary>
     /// 玩家对象基类
     /// </summary>
-    [GameEngine.DeclareActorClass("Player")]
+    [GameEngine.CActorClass("Player")]
     [GameEngine.EntityActivationComponent(typeof(AttackComponent))]
     internal class Player : Soldier
     {

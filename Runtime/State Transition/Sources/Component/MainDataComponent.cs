@@ -30,7 +30,7 @@ namespace GameSample.StateTransition
     /// <summary>
     /// 主场景数据组件类
     /// </summary>
-    [GameEngine.DeclareComponentClass("MainDataComponent")]
+    [GameEngine.CComponentClass("MainDataComponent")]
     internal class MainDataComponent : GameEngine.CComponent
     {
         public Player player;
