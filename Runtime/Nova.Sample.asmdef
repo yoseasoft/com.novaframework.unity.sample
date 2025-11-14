@@ -8,7 +8,8 @@
         "Nova.Import",
         "Nova.UniTask",
         "Nova.Protobuf",
-        "Nova.Protobuf.Extension"
+        "Nova.Protobuf.Extension",
+        "Game.Module.Protocol.Protobuf"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

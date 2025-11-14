@@ -38,6 +38,7 @@ namespace GameSample.DispatchCall
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Start)]
         static void BeforeStart(this MainScene self)
         {
+            self.PrintUsage();
         }
 
         [GameEngine.OnAspectBeforeCall(GameEngine.AspectBehaviourType.Update)]
@@ -53,6 +54,11 @@ namespace GameSample.DispatchCall
         [GameEngine.OnAspectAfterCall(GameEngine.AspectBehaviourType.Destroy)]
         static void AfterDestroy(this MainScene self)
         {
+        }
+
+        public static void PrintUsage(this MainScene self)
+        {
+            Debugger.Info(@"使用说明：Ｅ测试进入场景；Ａ测试后关卡刷怪；Ｑ测试关卡退出；①测试玩家信息打印；②测试玩家搜索目标；③测试玩家锁定目标；④测试玩家升级；⑤测试玩家追击目标；⑥测试角色属性打印；");
         }
     }
 }

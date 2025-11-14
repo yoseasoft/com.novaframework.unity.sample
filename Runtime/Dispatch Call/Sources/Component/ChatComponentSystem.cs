@@ -68,9 +68,11 @@ namespace GameSample.DispatchCall
             self.messages = null;
         }
 
-        [GameEngine.MessageListenerBindingOfTarget(typeof(ActorChatResp))]
-        static void OnChatResp(this ChatComponent self, ActorChatResp message)
+        // [GameEngine.MessageListenerBindingOfTarget(typeof(ActorChatResp))]
+        [GameEngine.MessageListenerBindingOfTarget(ProtoOpcode.ActorChatResp)]
+        static void OnChatResp(this ChatComponent self, ProtoBuf.Extension.IMessage msg) // ActorChatResp message)
         {
+            ActorChatResp message = msg as ActorChatResp;
             for (int n = 0; null != message.ChatList && n < message.ChatList.Count; ++n)
             {
                 Debugger.Info("角色对象‘{%s}’收到聊天信息：{%s}", ((Soldier) self.Entity).GetComponent<IdentityComponent>().objectName, message.ChatList[n].Text);

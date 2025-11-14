@@ -45,6 +45,8 @@ namespace GameSample.DispatchCall
             mainDataComponent.player = player;
 
             Debugger.Info("玩家对象‘{%s}’进入场景成功，正式开始游戏！", player.GetComponent<IdentityComponent>().objectName);
+
+            self.PrintUsage();
         }
 
         [GameEngine.MessageListenerBindingOfTarget(typeof(LeaveWorldResp))]
@@ -70,11 +72,15 @@ namespace GameSample.DispatchCall
             GameEngine.ActorHandler.Instance.DestroyActor(mainDataComponent.player);
 
             mainDataComponent.player = null;
+
+            self.PrintUsage();
         }
 
-        [GameEngine.MessageListenerBindingOfTarget(typeof(LevelSpawnResp))]
-        static void OnLevelSpawnNotify(this MainScene self, LevelSpawnResp message)
+        // [GameEngine.MessageListenerBindingOfTarget(typeof(LevelSpawnResp))]
+        [GameEngine.MessageListenerBindingOfTarget(ProtoOpcode.LevelSpawnResp)]
+        static void OnLevelSpawnNotify(this MainScene self, ProtoBuf.Extension.IMessage msg) // LevelSpawnResp message)
         {
+            LevelSpawnResp message = msg as LevelSpawnResp;
             MainDataComponent mainDataComponent = self.GetComponent<MainDataComponent>();
             mainDataComponent.monsters ??= new List<Monster>();
 
@@ -96,6 +102,8 @@ namespace GameSample.DispatchCall
 
                 Debugger.Info("怪物对象‘{%s}’进入场景成功，请锁定并攻击它！", monster.GetComponent<IdentityComponent>().objectName);
             }
+
+            self.PrintUsage();
         }
 
         static void InitPlayerFromMessage(Player player, PlayerInfo message)
