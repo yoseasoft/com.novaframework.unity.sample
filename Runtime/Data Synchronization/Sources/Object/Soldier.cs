@@ -33,7 +33,7 @@ namespace GameFramework.Sample.DataSynchronization
     [GAutomaticallyActivatedComponent(typeof(AttributeComponent))]
     [GAutomaticallyActivatedComponent(typeof(TransformComponent))]
     [GAutomaticallyActivatedComponent(typeof(SkillComponent))]
-    abstract class Soldier : GActorWarpper
+    abstract class Soldier : GActorWrapper
     {
         [OnReplicateId]
         public int uid;

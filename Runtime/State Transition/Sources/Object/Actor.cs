@@ -28,7 +28,7 @@ namespace GameFramework.Sample.StateTransition
     /// </summary>
     [OnActorConfigure("Actor")]
     [GAutomaticallyActivatedComponent(typeof(AttributeComponent))]
-    internal abstract class Actor : GActorWarpper
+    internal abstract class Actor : GActorWrapper
     {
     }
 }

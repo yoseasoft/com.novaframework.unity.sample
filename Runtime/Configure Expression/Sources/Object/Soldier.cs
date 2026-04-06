@@ -28,7 +28,7 @@ namespace GameFramework.Sample.ConfigureExpression
     /// </summary>
     [OnActorConfigure("Soldier")]
     [GAutomaticallyActivatedComponent(typeof(IdentityComponent))]
-    internal class Soldier : GActorWarpper
+    internal class Soldier : GActorWrapper
     {
     }
 }

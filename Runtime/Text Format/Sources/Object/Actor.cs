@@ -27,7 +27,7 @@ namespace GameFramework.Sample.TextFormat
     /// 角色对象基类
     /// </summary>
     [OnActorConfigure("Actor")]
-    internal abstract class Actor : GActorWarpper
+    internal abstract class Actor : GActorWrapper
     {
         private int objectID;
         protected int objectType;

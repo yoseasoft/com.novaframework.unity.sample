@@ -28,7 +28,7 @@ namespace GameFramework.Sample.DependencyInject
     /// </summary>
     [OnActorConfigure("Actor")]
     [GAutomaticallyActivatedComponent(typeof(IdentityComponent))]
-    internal abstract class Actor : GActorWarpper
+    internal abstract class Actor : GActorWrapper
     {
     }
 }

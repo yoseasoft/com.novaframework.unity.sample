@@ -28,7 +28,7 @@ namespace GameFramework.Sample.PerformanceAnalysis
     /// </summary>
     [OnActorConfigure("GameActor")]
     [GAutomaticallyActivatedComponent(typeof(GameAttributeComponent))]
-    internal abstract class GameActor : GActorWarpper
+    internal abstract class GameActor : GActorWrapper
     {
         public int actor_count;
 

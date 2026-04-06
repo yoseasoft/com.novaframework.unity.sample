@@ -29,7 +29,7 @@ namespace GameFramework.Sample.DispatchCall
     [OnActorConfigure("Actor")]
     [GAutomaticallyActivatedComponent(typeof(IdentityComponent))]
     [GAutomaticallyActivatedComponent(typeof(AttributeComponent))]
-    internal abstract class Actor : GActorWarpper
+    internal abstract class Actor : GActorWrapper
     {
     }
 }

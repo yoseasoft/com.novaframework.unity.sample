@@ -29,6 +29,6 @@ namespace GameFramework.Sample.DependencyInject
     [OnComponentConfigure("MainDataComponent")]
     internal class MainDataComponent : GComponentWrapper
     {
-        public GActorWarpper targetObject;
+        public GActorWrapper targetObject;
     }
 }
