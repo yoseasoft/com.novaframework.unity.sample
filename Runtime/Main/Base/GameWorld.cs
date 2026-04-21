@@ -47,11 +47,11 @@ namespace GameFramework.Sample
 
             SampleFilteringProcessor.AddSampleFilter(tutorialType);
 
+            // 自动注册全部热加载模块
+            GameEngine.GameApi.RegisterAllHotModulesOfContextConfigure();
+
             // 加载应用上下文
             LoadApplicationContexts();
-
-            // 自动注册全部热加载模块
-            GameEngine.GameApi.AutoRegisterAllHotModulesOfContextConfigure();
 
             RegAssemblyNames(GlobalMacros.AssemblyName);
 
@@ -80,7 +80,7 @@ namespace GameFramework.Sample
             GameEngine.GameLibrary.OnApplicationShutdown(OnApplicationResponseCallback);
 
             // 自动注销所有热加载模块
-            GameEngine.GameApi.AutoUnregisterAllHotModulesOfContextConfigure();
+            GameEngine.GameApi.UnregisterAllHotModulesOfContextConfigure();
 
             SampleFilteringProcessor.RemoveSampleFilter();
 
