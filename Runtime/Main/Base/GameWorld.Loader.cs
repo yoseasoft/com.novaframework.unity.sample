@@ -38,8 +38,8 @@ namespace GameFramework.Sample
 
         const string ApplicationConfigureFile = @"<?xml version=""1.0"" encoding=""utf-8""?>
                 <root>
-                    <!-- 配置热加载模块 -->
-                    <module-import url=""module""/>
+                    <!-- 配置模块参数 -->
+                    <module-config url=""module""/>
 
                     <!-- 配置bean文件导入 -->
                     <!-- bean-import url=""bean""/ -->
@@ -48,8 +48,8 @@ namespace GameFramework.Sample
         const string ModuleConfigureFile = @"<?xml version=""1.0"" encoding=""utf-8""?>
                 <root>
                     <!-- 配置热加载模块 -->
-                    <hot-load name=""GameFramework.Protocol.Protobuf""/>
-                    <hot-load name=""GameFramework.View.Fairygui""/>
+                    <!-- hot-load name=""GameFramework.Protocol.Protobuf""/ -->
+                    <!-- hot-load name=""GameFramework.View.Fairygui""/ -->
                 </root>";
 
         private static IList<string> _waitingLoadAssemblyNames = null;

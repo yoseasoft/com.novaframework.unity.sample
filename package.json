@@ -2,7 +2,7 @@
   "name": "com.gameframework.unity.sample",
   "displayName": "GameFramework.Sample",
   "description": "The sample case of function module for GameFramework",
-  "version": "1.0.3",
+  "version": "1.0.14",
   "unity": "2018.3",
   "unityRelease": "0f1",
   "license": "MIT",
